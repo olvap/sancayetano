@@ -3,16 +3,12 @@ App::uses('AppController', 'Controller');
 /**
  * Invoices Controller
  *
-<<<<<<< HEAD
  * @property Invoice $Invoice
  * @property PaginatorComponent $Paginator
-=======
->>>>>>> 786319f242dfc0bdc7901968fb8b84e003a880d7
  */
 class InvoicesController extends AppController {
 
 /**
-<<<<<<< HEAD
  * Components
  *
  * @var array
@@ -60,6 +56,36 @@ class InvoicesController extends AppController {
 			}
 		}
 		$estates = $this->Invoice->Estate->find('list');
+		$this->set(compact('estates'));
+	}
+
+/**
+ * nueva method
+ *
+ * @return void
+ */
+	public function nueva($id = null) {
+		if ($this->request->is('post')) {
+			$this->Invoice->create();
+			if ($this->Invoice->save($this->request->data)) {
+				// $this->Session->setFlash(__('The invoice has been saved.'));
+				return $this->redirect(array('action' => 'index'));
+				// return $this->redirect(array('action' => 'printPDF', $this->Invoice->id));
+			} else {
+				$this->Session->setFlash(__('The invoice could not be saved. Please, try again.'));
+			}
+		}
+		if(!$id) {
+			$this->redirect('/');
+		}
+		$estate = $this->Invoice->Estate->findById($id);
+		// debug($estate, $showHtml = null, $showFrom = true);
+		$this->request->data['Invoice']['address'] = $estate['Estate']['address'];
+		$this->request->data['Invoice']['subtotal'] = $estate['Estate']['price'];
+		$this->request->data['Invoice']['iva'] = $estate['Estate']['price'] * 0.21;
+		$this->request->data['Invoice']['total'] = $estate['Estate']['price'] * 1.21;
+		$this->request->data['Invoice']['name'] = $estate['Renter']['name'];
+		$this->request->data['Invoice']['ficha'] = $estate['Estate']['ficha'];
 		$this->set(compact('estates'));
 	}
 
@@ -199,13 +225,20 @@ class InvoicesController extends AppController {
 			$this->Session->setFlash(__('The invoice could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
-	}}
-=======
- * Scaffold
- *
- * @var mixed
- */
-	public $scaffold;
+	}
+
+	public function printPDF($id = null) {
+		if(!$id) {
+			$this->redirect('/');
+		}
+
+		$this -> response -> type("pdf");
+		$this -> layout = 'ajax';
+
+		$invoice = $this->Invoice->findById($id);
+
+		$this->set(compact('invoice'));
+		$this->render('printpdf');
+	}
 
 }
->>>>>>> 786319f242dfc0bdc7901968fb8b84e003a880d7

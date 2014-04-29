@@ -24,11 +24,30 @@
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
-	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
+	// Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
+	Router::connect('/', array('controller' => 'estates', 'action' => 'index'));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */
 	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
+	
+	# Facturas
+	Router::connect('/facturas', array('controller' => 'invoices', 'action' => 'index'));
+	Router::connect('/factura/nueva', array('controller' => 'invoices', 'action' => 'add'));
+
+	# Inquilinos
+	Router::connect('/inquilinos', array('controller' => 'renters', 'action' => 'index'));
+	Router::connect('/inquilino/nuevo', array('controller' => 'renters', 'action' => 'add'));
+
+	# Propiedades
+	Router::connect('/propiedades', array('controller' => 'estates', 'action' => 'index'));
+	Router::connect('/propiedad/nueva', array('controller' => 'estates', 'action' => 'nueva'));
+	
+	# Propietarios
+	Router::connect('/propietarios', array('controller' => 'owners', 'action' => 'index'));
+	Router::connect('/propietario/nuevo', array('controller' => 'owners', 'action' => 'add'));
+
+
 
 /**
  * Load all plugin routes. See the CakePlugin documentation on
