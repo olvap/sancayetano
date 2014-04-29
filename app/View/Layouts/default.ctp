@@ -30,6 +30,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('cake.generic');
+		//echo $this->Html->css('bootstrap');
+		
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -39,7 +41,22 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+			<!--<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<div class="container">
+					 <a class="navbar-brand" href="#">S. A. San Cayetano</a>
+					 <ul class="nav navbar-nav">
+					 	<li class="dropdown">
+          					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Propietarios<b class="caret"></b></a>
+				          	<ul class="dropdown-menu">
+					            <li><a href="#">Nuevo Propietario</a></li>
+					            <li><a href="#">Listar Propietarios</a></li>
+				          	</ul>
+				        </li>
+					 </ul>
+    			</div>
+			</nav>-->
+
+			<h1>S. A. San Cayetano</h1>
 		</div>
 		<div id="content">
 
