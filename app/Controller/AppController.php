@@ -21,6 +21,8 @@
 
 App::uses('Controller', 'Controller');
 
+Configure::write('Config.language', 'esp');  
+
 /**
  * Application Controller
  *
