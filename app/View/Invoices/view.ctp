@@ -113,10 +113,11 @@
 	<?php endforeach; ?>
 	</table>
 <?php endif; ?>
-
+<!--
 	<div class="actions">
 		<ul>
 			<li><?php echo $this->Html->link(__('New Item'), array('controller' => 'items', 'action' => 'add')); ?> </li>
 		</ul>
-	</div>
+	</div>-->
+	<?php echo $this->element('menu'); ?>
 </div>

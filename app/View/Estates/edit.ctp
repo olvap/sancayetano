@@ -4,7 +4,7 @@
 		<legend><?php echo __('Edit Estate'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
-		echo $this->Form->input('numeroficha');
+		echo $this->Form->input('ficha');
 		echo $this->Form->input('name');
 		echo $this->Form->input('address');
 		echo $this->Form->input('price');
@@ -16,6 +16,7 @@
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>
+<!--
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
@@ -27,4 +28,5 @@
 		<li><?php echo $this->Html->link(__('List Renters'), array('controller' => 'renters', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Renter'), array('controller' => 'renters', 'action' => 'add')); ?> </li>
 	</ul>
-</div>
+</div>-->
+<?php echo $this->element('menu'); ?>

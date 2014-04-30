@@ -6,7 +6,7 @@
 			<?php echo h($estate['Estate']['id']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Numeroficha'); ?></dt>
+		<dt><?php echo __('ficha'); ?></dt>
 		<dd>
 			<?php echo h($estate['Estate']['ficha']); ?>
 			&nbsp;
@@ -58,6 +58,7 @@
 		</dd>
 	</dl>
 </div>
+<!--
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
@@ -70,4 +71,5 @@
 		<li><?php echo $this->Html->link(__('List Renters'), array('controller' => 'renters', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Renter'), array('controller' => 'renters', 'action' => 'add')); ?> </li>
 	</ul>
-</div>
+</div>-->
+<?php echo $this->element('menu'); ?>

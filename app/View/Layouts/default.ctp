@@ -31,31 +31,50 @@ $cakeDescription = __d('cake_dev', 'Inmobiliaria San Cayetano');
 
 		echo $this->Html->css('cake.generic');
 		//echo $this->Html->css('bootstrap');
-		
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
-		echo $this->fetch('script');
 	?>
 </head>
 <body>
 	<div id="container">
 		<div id="header">
-			<!--<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<!--	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<div class="container">
 					 <a class="navbar-brand" href="#">S. A. San Cayetano</a>
 					 <ul class="nav navbar-nav">
 					 	<li class="dropdown">
           					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Propietarios<b class="caret"></b></a>
 				          	<ul class="dropdown-menu">
-					            <li><a href="#">Nuevo Propietario</a></li>
-					            <li><a href="#">Listar Propietarios</a></li>
+					           <li><?php echo $this->Html->link(__('New Owner'), array('controller' =>'owners','action' => 'add')); ?></li>
+					           <li><?php echo $this->Html->link(__('List Owners'), array('controller' =>'owners','action' => 'index')); ?></li>
+				          	</ul>
+				        </li>
+				        <li class="dropdown">
+          					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Inquilinos<b class="caret"></b></a>
+				          	<ul class="dropdown-menu">
+					           <li><?php echo $this->Html->link(__('New Renter'), array('controller' =>'renters','action' => 'add')); ?></li>
+					           <li><?php echo $this->Html->link(__('List Renters'), array('controller' =>'renters','action' => 'index')); ?></li>
+				          	</ul>
+				        </li>
+				         <li class="dropdown">
+          					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Propiedades<b class="caret"></b></a>
+				          	<ul class="dropdown-menu">
+					           <li><?php echo $this->Html->link(__('New Estate'), array('controller' =>'estates','action' => 'add')); ?></li>
+					           <li><?php echo $this->Html->link(__('List Estates'), array('controller' =>'estates','action' => 'index')); ?></li>
+				          	</ul>
+				        </li>
+				        <li class="dropdown">
+          					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Facturas<b class="caret"></b></a>
+				          	<ul class="dropdown-menu">
+					           <li><?php echo $this->Html->link(__('New Invoice'), array('controller' =>'invoices','action' => 'add')); ?></li>
+					           <li><?php echo $this->Html->link(__('List Invoices'), array('controller' =>'invoices','action' => 'index')); ?></li>
 				          	</ul>
 				        </li>
 					 </ul>
     			</div>
-			</nav>-->
-
+			</nav>
+-->
 			<h1>S. A. San Cayetano</h1>
 		</div>
 		<div id="content">
@@ -76,5 +95,12 @@ $cakeDescription = __d('cake_dev', 'Inmobiliaria San Cayetano');
 		</div>
 	</div>
 	<?php echo $this->element('sql_dump'); ?>
+	<?php
+			echo $this->Html->script(array(
+			'//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
+			'//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js'
+			));
+			echo $this->fetch('script');
+			?>
 </body>
 </html>
