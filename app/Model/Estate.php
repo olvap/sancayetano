@@ -1,13 +1,11 @@
 <?php
 App::uses('AppModel', 'Model');
+
 /**
  * Estate Model
  *
-<<<<<<< HEAD
  * @property Owner $Owner
  * @property Renter $Renter
-=======
->>>>>>> 786319f242dfc0bdc7901968fb8b84e003a880d7
  */
 class Estate extends AppModel {
 
@@ -18,7 +16,6 @@ class Estate extends AppModel {
  */
 	public $displayField = 'name';
 
-<<<<<<< HEAD
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
@@ -41,8 +38,8 @@ class Estate extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		)
-=======
+		));
+
 /**
  * Validation rules
  *
@@ -109,6 +106,6 @@ class Estate extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
->>>>>>> 786319f242dfc0bdc7901968fb8b84e003a880d7
+
 	);
 }

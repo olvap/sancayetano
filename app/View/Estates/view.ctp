@@ -8,7 +8,7 @@
 		</dd>
 		<dt><?php echo __('Numeroficha'); ?></dt>
 		<dd>
-			<?php echo h($estate['Estate']['numeroficha']); ?>
+			<?php echo h($estate['Estate']['ficha']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Name'); ?></dt>

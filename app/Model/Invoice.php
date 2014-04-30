@@ -4,12 +4,10 @@ App::uses('AppModel', 'Model');
  * Invoice Model
  *
  * @property Estates $Estates
-<<<<<<< HEAD
  * @property Item $Item
-=======
->>>>>>> 786319f242dfc0bdc7901968fb8b84e003a880d7
  */
-class Invoice extends AppModel {
+
+ class Invoice extends AppModel {
 
 /**
  * Display field
@@ -18,8 +16,6 @@ class Invoice extends AppModel {
  */
 	public $displayField = 'name';
 
-<<<<<<< HEAD
-=======
 /**
  * Validation rules
  *
@@ -97,7 +93,7 @@ class Invoice extends AppModel {
 			),
 		),
 	);
->>>>>>> 786319f242dfc0bdc7901968fb8b84e003a880d7
+
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
@@ -115,7 +111,7 @@ class Invoice extends AppModel {
 			'order' => ''
 		)
 	);
-<<<<<<< HEAD
+
 
 /**
  * hasMany associations
@@ -138,6 +134,4 @@ class Invoice extends AppModel {
 		)
 	);
 
-=======
->>>>>>> 786319f242dfc0bdc7901968fb8b84e003a880d7
 }

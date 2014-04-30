@@ -3,16 +3,12 @@ App::uses('AppController', 'Controller');
 /**
  * Invoices Controller
  *
-<<<<<<< HEAD
  * @property Invoice $Invoice
  * @property PaginatorComponent $Paginator
-=======
->>>>>>> 786319f242dfc0bdc7901968fb8b84e003a880d7
  */
 class InvoicesController extends AppController {
 
 /**
-<<<<<<< HEAD
  * Components
  *
  * @var array
@@ -199,13 +195,7 @@ class InvoicesController extends AppController {
 			$this->Session->setFlash(__('The invoice could not be deleted. Please, try again.'));
 		}
 		return $this->redirect(array('action' => 'index'));
-	}}
-=======
- * Scaffold
- *
- * @var mixed
- */
-	public $scaffold;
-
+	}
 }
->>>>>>> 786319f242dfc0bdc7901968fb8b84e003a880d7
+
+
