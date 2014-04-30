@@ -94,7 +94,6 @@ App::uses('AppModel', 'Model');
 		),
 	);
 
-
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
@@ -103,8 +102,8 @@ App::uses('AppModel', 'Model');
  * @var array
  */
 	public $belongsTo = array(
-		'Estates' => array(
-			'className' => 'Estates',
+		'Estate' => array(
+			'className' => 'Estate',
 			'foreignKey' => 'estates_id',
 			'conditions' => '',
 			'fields' => '',

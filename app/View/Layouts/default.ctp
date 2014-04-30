@@ -65,11 +65,13 @@ $cakeDescription = __d('cake_dev', 'Inmobiliaria San Cayetano');
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
+			Sistema de Gestión San Cayetano
+			<?php
+			 // echo $this->Html->link(
+				// 	$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
+				// 	'http://www.cakephp.org/',
+				// 	array('target' => '_blank', 'escape' => false)
+				// );
 			?>
 		</div>
 	</div>

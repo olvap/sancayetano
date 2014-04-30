@@ -60,6 +60,36 @@ class InvoicesController extends AppController {
 	}
 
 /**
+ * nueva method
+ *
+ * @return void
+ */
+	public function nueva($id = null) {
+		if ($this->request->is('post')) {
+			$this->Invoice->create();
+			if ($this->Invoice->save($this->request->data)) {
+				// $this->Session->setFlash(__('The invoice has been saved.'));
+				return $this->redirect(array('action' => 'index'));
+				// return $this->redirect(array('action' => 'printPDF', $this->Invoice->id));
+			} else {
+				$this->Session->setFlash(__('The invoice could not be saved. Please, try again.'));
+			}
+		}
+		if(!$id) {
+			$this->redirect('/');
+		}
+		$estate = $this->Invoice->Estate->findById($id);
+		// debug($estate, $showHtml = null, $showFrom = true);
+		$this->request->data['Invoice']['address'] = $estate['Estate']['address'];
+		$this->request->data['Invoice']['subtotal'] = $estate['Estate']['price'];
+		$this->request->data['Invoice']['iva'] = $estate['Estate']['price'] * 0.21;
+		$this->request->data['Invoice']['total'] = $estate['Estate']['price'] * 1.21;
+		$this->request->data['Invoice']['name'] = $estate['Renter']['name'];
+		$this->request->data['Invoice']['ficha'] = $estate['Estate']['ficha'];
+		$this->set(compact('estates'));
+	}
+
+/**
  * edit method
  *
  * @throws NotFoundException
@@ -196,6 +226,20 @@ class InvoicesController extends AppController {
 		}
 		return $this->redirect(array('action' => 'index'));
 	}
+
+
+	public function printPDF($id = null) {
+		if(!$id) {
+			$this->redirect('/');
+		}
+
+		$this -> response -> type("pdf");
+		$this -> layout = 'ajax';
+
+		$invoice = $this->Invoice->findById($id);
+
+		$this->set(compact('invoice'));
+		$this->render('printpdf');
+	}
+
 }
-
-

@@ -16,7 +16,6 @@ class Estate extends AppModel {
  */
 	public $displayField = 'name';
 
-
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
@@ -38,7 +37,8 @@ class Estate extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		));
+		)
+	);
 
 /**
  * Validation rules
@@ -106,6 +106,5 @@ class Estate extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-
 	);
 }
