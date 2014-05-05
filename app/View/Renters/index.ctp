@@ -3,39 +3,17 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('name'); ?></th>
-			<th><?php echo $this->Paginator->sort('address'); ?></th>
-			<th><?php echo $this->Paginator->sort('city'); ?></th>
-			<th><?php echo $this->Paginator->sort('state'); ?></th>
-			<th><?php echo $this->Paginator->sort('telephone'); ?></th>
-			<th><?php echo $this->Paginator->sort('email'); ?></th>
-			<th><?php echo $this->Paginator->sort('dni'); ?></th>
-			<th><?php echo $this->Paginator->sort('cuit'); ?></th>
-			<th><?php echo $this->Paginator->sort('responsableinscripto'); ?></th>
-			<th><?php echo $this->Paginator->sort('exento'); ?></th>
-			<th><?php echo $this->Paginator->sort('monotributista'); ?></th>
-			<th><?php echo $this->Paginator->sort('consumidorfinal'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
 			<th><?php echo $this->Paginator->sort('modified'); ?></th>
+			<th><?php echo $this->Paginator->sort('person_id'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($renters as $renter): ?>
 	<tr>
 		<td><?php echo h($renter['Renter']['id']); ?>&nbsp;</td>
-		<td><?php echo h($renter['Renter']['name']); ?>&nbsp;</td>
-		<td><?php echo h($renter['Renter']['address']); ?>&nbsp;</td>
-		<td><?php echo h($renter['Renter']['city']); ?>&nbsp;</td>
-		<td><?php echo h($renter['Renter']['state']); ?>&nbsp;</td>
-		<td><?php echo h($renter['Renter']['telephone']); ?>&nbsp;</td>
-		<td><?php echo h($renter['Renter']['email']); ?>&nbsp;</td>
-		<td><?php echo h($renter['Renter']['dni']); ?>&nbsp;</td>
-		<td><?php echo h($renter['Renter']['cuit']); ?>&nbsp;</td>
-		<td><?php echo h($renter['Renter']['responsableinscripto']); ?>&nbsp;</td>
-		<td><?php echo h($renter['Renter']['exento']); ?>&nbsp;</td>
-		<td><?php echo h($renter['Renter']['monotributista']); ?>&nbsp;</td>
-		<td><?php echo h($renter['Renter']['consumidorfinal']); ?>&nbsp;</td>
 		<td><?php echo h($renter['Renter']['created']); ?>&nbsp;</td>
 		<td><?php echo h($renter['Renter']['modified']); ?>&nbsp;</td>
+		<td><?php echo h($renter['Renter']['person_id']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $renter['Renter']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $renter['Renter']['id'])); ?>
@@ -58,7 +36,6 @@
 	?>
 	</div>
 </div>
-<!--
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
@@ -66,5 +43,4 @@
 		<li><?php echo $this->Html->link(__('List Estates'), array('controller' => 'estates', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Estate'), array('controller' => 'estates', 'action' => 'add')); ?> </li>
 	</ul>
-</div>-->
-<?php echo $this->element('menu'); ?>
+</div>

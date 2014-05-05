@@ -1,0 +1,63 @@
+<?php
+App::uses('IvasController', 'Controller');
+
+/**
+ * IvasController Test Case
+ *
+ */
+class IvasControllerTest extends ControllerTestCase {
+
+/**
+ * Fixtures
+ *
+ * @var array
+ */
+	public $fixtures = array(
+		'app.iva',
+		'app.person',
+		'app.owner',
+		'app.estate',
+		'app.renter'
+	);
+
+/**
+ * testIndex method
+ *
+ * @return void
+ */
+	public function testIndex() {
+	}
+
+/**
+ * testView method
+ *
+ * @return void
+ */
+	public function testView() {
+	}
+
+/**
+ * testAdd method
+ *
+ * @return void
+ */
+	public function testAdd() {
+	}
+
+/**
+ * testEdit method
+ *
+ * @return void
+ */
+	public function testEdit() {
+	}
+
+/**
+ * testDelete method
+ *
+ * @return void
+ */
+	public function testDelete() {
+	}
+
+}

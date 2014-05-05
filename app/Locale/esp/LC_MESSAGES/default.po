@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sancaye\n"
 "POT-Creation-Date: 2014-04-29 18:48-0300\n"
-"PO-Revision-Date: 2014-04-29 18:59-0300\n"
-"Last-Translator: cele <celeweidmann@gmail.com>\n"
+"PO-Revision-Date: 2014-05-05 14:33-0300\n"
+"Last-Translator: Ale Prieto <aleprieto@gmail.com>\n"
 "Language-Team: \n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -44,19 +44,19 @@ msgstr ""
 
 #: Controller/InvoicesController.php:52;75;143;166
 msgid "The invoice has been saved."
-msgstr ""
+msgstr "La factura ha sido guardada."
 
 #: Controller/InvoicesController.php:55;78;146;169
 msgid "The invoice could not be saved. Please, try again."
-msgstr ""
+msgstr "La factura no ha sido guardada. Por favor, intente nuevamente."
 
 #: Controller/InvoicesController.php:102;193
 msgid "The invoice has been deleted."
-msgstr ""
+msgstr "La factura ha sido eliminada."
 
 #: Controller/InvoicesController.php:104;195
 msgid "The invoice could not be deleted. Please, try again."
-msgstr ""
+msgstr "La factura no ha sido eliminada. Por favor, intente nuevamente."
 
 #: View/Estates/add.ctp:4
 msgid "Add Estate"
@@ -73,7 +73,7 @@ msgstr "Crear Propiedad"
 #: View/Renters/add.ctp:20
 #: View/Renters/edit.ctp:21
 msgid "Submit"
-msgstr ""
+msgstr "Enviar"
 
 #: View/Estates/add.ctp:19
 #: View/Estates/edit.ctp:20
@@ -173,7 +173,7 @@ msgstr "Editar Propiedades"
 #: View/Renters/index.ctp:42
 #: View/Renters/view.ctp:126
 msgid "Delete"
-msgstr ""
+msgstr "Eliminar"
 
 #: View/Estates/edit.ctp:23
 #: View/Estates/index.ctp:38
@@ -191,7 +191,7 @@ msgstr ""
 #: View/Renters/index.ctp:42
 #: View/Renters/view.ctp:85;126
 msgid "Are you sure you want to delete # %s?"
-msgstr ""
+msgstr "¿Está seguro que quiere eliminarlo?"
 
 #: View/Estates/index.ctp:2
 #: View/Invoices/view.ctp:64
@@ -226,7 +226,7 @@ msgstr "Editar"
 #: View/Owners/index.ctp:44
 #: View/Renters/index.ctp:50
 msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
-msgstr ""
+msgstr "Página {:page} de {:pages}, mostrando {:current} registros de un total de {:count}, empezando en {:start} y terminando en {:end}"
 
 #: View/Estates/index.ctp:51
 #: View/Invoices/index.ctp:53
@@ -255,7 +255,7 @@ msgstr "próximo"
 #: View/Renters/index.ctp:66
 #: View/Renters/view.ctp:89;135
 msgid "New Estate"
-msgstr "Nueva Propiedade"
+msgstr "Nueva Propiedad"
 
 #: View/Estates/view.ctp:2
 msgid "Estate"
@@ -567,7 +567,7 @@ msgstr ""
 
 #: View/Errors/error400.ctp:23
 msgid "The requested address %s was not found on this server."
-msgstr ""
+msgstr "La acción requerida no fue encontrada en el servidor."
 
 #: View/Errors/error500.ctp:22
 msgid "An Internal Error Has Occurred."

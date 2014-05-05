@@ -5,7 +5,6 @@ App::uses('AppController', 'Controller');
  *
  * @property Owner $Owner
  * @property PaginatorComponent $Paginator
- * @property SessionComponent $Session
  */
 class OwnersController extends AppController {
 
@@ -14,7 +13,7 @@ class OwnersController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator', 'Session');
+	public $components = array('Paginator');
 
 /**
  * index method
@@ -48,14 +47,24 @@ class OwnersController extends AppController {
  */
 	public function add() {
 		if ($this->request->is('post')) {
-			$this->Owner->create();
-			if ($this->Owner->save($this->request->data)) {
-				$this->Session->setFlash(__('The owner has been saved.'), array('class'=>'success'));
-				return $this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The owner could not be saved. Please, try again.'));
+			$owner = $this->request->data;
+			$person['Person'] = $owner['Person'];
+
+			$this->Owner->Person->create();
+			if ($this->Owner->Person->save($person)) {
+				$owner['Owner']['person_id'] = $this->Owner->Person->id;
+
+				$this->Owner->create();
+				if ($this->Owner->save($owner)) {
+					$this->Session->setFlash(__('The owner has been saved.'));
+					return $this->redirect(array('action' => 'index'));
+				} else {
+					$this->Session->setFlash(__('The owner could not be saved. Please, try again.'));
+				}
 			}
 		}
+		$ivas = $this->Owner->Person->Iva->find('list');
+		$this->set(compact('ivas'));
 	}
 
 /**
@@ -70,7 +79,8 @@ class OwnersController extends AppController {
 			throw new NotFoundException(__('Invalid owner'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
-			if ($this->Owner->save($this->request->data)) {
+			// debug($this->request->data, $showHtml = null, $showFrom = true);
+			if ($this->Owner->saveAll($this->request->data)) {
 				$this->Session->setFlash(__('The owner has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
@@ -80,6 +90,8 @@ class OwnersController extends AppController {
 			$options = array('conditions' => array('Owner.' . $this->Owner->primaryKey => $id));
 			$this->request->data = $this->Owner->find('first', $options);
 		}
+		$ivas = $this->Owner->Person->Iva->find('list');
+		$this->set(compact('ivas'));
 	}
 
 /**

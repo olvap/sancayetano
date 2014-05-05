@@ -1,5 +1,6 @@
 # Ale #
 #######
+/app/webroot/.sass-cache
 /wiki
 
 # User specific & automatically generated files #

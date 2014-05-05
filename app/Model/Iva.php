@@ -1,12 +1,11 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Owner Model
+ * Iva Model
  *
  * @property Person $Person
- * @property Estate $Estate
  */
-class Owner extends AppModel {
+class Iva extends AppModel {
 
 /**
  * Validation rules
@@ -14,9 +13,9 @@ class Owner extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'person_id' => array(
-			'uuid' => array(
-				'rule' => array('uuid'),
+		'name' => array(
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -29,29 +28,14 @@ class Owner extends AppModel {
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
- * belongsTo associations
- *
- * @var array
- */
-	public $belongsTo = array(
-		'Person' => array(
-			'className' => 'Person',
-			'foreignKey' => 'person_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
-	);
-
-/**
  * hasMany associations
  *
  * @var array
  */
 	public $hasMany = array(
-		'Estate' => array(
-			'className' => 'Estate',
-			'foreignKey' => 'owner_id',
+		'Person' => array(
+			'className' => 'Person',
+			'foreignKey' => 'iva_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',

@@ -1,12 +1,12 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Owner Model
+ * Person Model
  *
- * @property Person $Person
- * @property Estate $Estate
+ * @property Iva $Iva
+ * @property Owner $Owner
  */
-class Owner extends AppModel {
+class Person extends AppModel {
 
 /**
  * Validation rules
@@ -14,9 +14,19 @@ class Owner extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'person_id' => array(
-			'uuid' => array(
-				'rule' => array('uuid'),
+		'name' => array(
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'iva_id' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -34,9 +44,9 @@ class Owner extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Person' => array(
-			'className' => 'Person',
-			'foreignKey' => 'person_id',
+		'Iva' => array(
+			'className' => 'Iva',
+			'foreignKey' => 'iva_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
@@ -49,9 +59,9 @@ class Owner extends AppModel {
  * @var array
  */
 	public $hasMany = array(
-		'Estate' => array(
-			'className' => 'Estate',
-			'foreignKey' => 'owner_id',
+		'Owner' => array(
+			'className' => 'Owner',
+			'foreignKey' => 'person_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
