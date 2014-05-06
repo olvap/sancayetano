@@ -7,6 +7,11 @@ App::uses('AppModel', 'Model');
  * @property Estate $Estate
  */
 class Owner extends AppModel {
+	// public $displayField = 'name';
+	
+	public $virtualFields = array(
+		'name' => "Person.name"
+	);
 
 /**
  * Validation rules

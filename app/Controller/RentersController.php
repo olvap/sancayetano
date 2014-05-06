@@ -47,14 +47,24 @@ class RentersController extends AppController {
  */
 	public function add() {
 		if ($this->request->is('post')) {
-			$this->Renter->create();
-			if ($this->Renter->save($this->request->data)) {
-				$this->Session->setFlash(__('The renter has been saved.'));
-				return $this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The renter could not be saved. Please, try again.'));
+			$renter = $this->request->data;
+			$person['Person'] = $renter['Person'];
+
+			$this->Renter->Person->create();
+			if ($this->Renter->Person->save($person)) {
+				$owner['Renter']['person_id'] = $this->Renter->Person->id;
+
+				$this->Renter->create();
+				if ($this->Renter->save($this->request->data)) {
+					$this->Session->setFlash(__('The renter has been saved.'));
+					return $this->redirect(array('action' => 'index'));
+				} else {
+					$this->Session->setFlash(__('The renter could not be saved. Please, try again.'));
+				}
 			}
 		}
+		$ivas = $this->Renter->Person->Iva->find('list');
+		$this->set(compact('ivas'));
 	}
 
 /**
@@ -69,7 +79,7 @@ class RentersController extends AppController {
 			throw new NotFoundException(__('Invalid renter'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
-			if ($this->Renter->save($this->request->data)) {
+			if ($this->Renter->saveAll($this->request->data)) {
 				$this->Session->setFlash(__('The renter has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
@@ -79,6 +89,8 @@ class RentersController extends AppController {
 			$options = array('conditions' => array('Renter.' . $this->Renter->primaryKey => $id));
 			$this->request->data = $this->Renter->find('first', $options);
 		}
+		$ivas = $this->Renter->Person->Iva->find('list');
+		$this->set(compact('ivas'));
 	}
 
 /**

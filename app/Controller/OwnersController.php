@@ -79,7 +79,6 @@ class OwnersController extends AppController {
 			throw new NotFoundException(__('Invalid owner'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
-			// debug($this->request->data, $showHtml = null, $showFrom = true);
 			if ($this->Owner->saveAll($this->request->data)) {
 				$this->Session->setFlash(__('The owner has been saved.'));
 				return $this->redirect(array('action' => 'index'));

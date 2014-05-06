@@ -56,7 +56,7 @@ $cakeDescription = __d('cake_dev', 'Inmobiliaria San Cayetano');
 			          	</ul>
 			        </li>
 			         <li class="dropdown">
-      					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Propiedades<b class="caret"></b></a>
+      					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Inmuebles<b class="caret"></b></a>
 			          	<ul class="dropdown-menu">
 				           <li><?php echo $this->Html->link(__('New Estate'), array('controller' =>'estates','action' => 'add')); ?></li>
 				           <li><?php echo $this->Html->link(__('List Estates'), array('controller' =>'estates','action' => 'index')); ?></li>

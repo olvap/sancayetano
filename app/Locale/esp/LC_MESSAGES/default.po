@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: sancaye\n"
-"POT-Creation-Date: 2014-04-29 18:48-0300\n"
-"PO-Revision-Date: 2014-05-05 14:33-0300\n"
+"POT-Creation-Date: 2014-05-05 12:17-0300\n"
+"PO-Revision-Date: 2014-05-05 15:02-0300\n"
 "Last-Translator: Ale Prieto <aleprieto@gmail.com>\n"
 "Language-Team: \n"
 "Language: \n"
@@ -20,52 +20,194 @@ msgstr ""
 
 #: Controller/EstatesController.php:37;72;100;130;165;193
 msgid "Invalid estate"
-msgstr ""
+msgstr "Inmueble inválido"
 
 #: Controller/EstatesController.php:52;76;145;169
 msgid "The estate has been saved."
-msgstr ""
+msgstr "El inmueble ha sido guardado."
 
 #: Controller/EstatesController.php:55;79;148;172
 msgid "The estate could not be saved. Please, try again."
-msgstr ""
+msgstr "El propietario no ha sido guardado. Por favor, intente nuevamente."
 
 #: Controller/EstatesController.php:104;197
 msgid "The estate has been deleted."
-msgstr ""
+msgstr "El inmueble ha sido eliminado."
 
 #: Controller/EstatesController.php:106;199
 msgid "The estate could not be deleted. Please, try again."
-msgstr ""
+msgstr "El inmueble no ha sido eliminado. Por favor, intente nuevamente"
 
-#: Controller/InvoicesController.php:37;71;98;128;162;189
+#: Controller/InvoicesController.php:37;101;128;158;192;219
 msgid "Invalid invoice"
-msgstr ""
+msgstr "Factura inválida"
 
-#: Controller/InvoicesController.php:52;75;143;166
+#: Controller/InvoicesController.php:52;105;173;196
 msgid "The invoice has been saved."
 msgstr "La factura ha sido guardada."
 
-#: Controller/InvoicesController.php:55;78;146;169
+#: Controller/InvoicesController.php:55;75;108;176;199
 msgid "The invoice could not be saved. Please, try again."
 msgstr "La factura no ha sido guardada. Por favor, intente nuevamente."
 
-#: Controller/InvoicesController.php:102;193
+#: Controller/InvoicesController.php:132;223
 msgid "The invoice has been deleted."
 msgstr "La factura ha sido eliminada."
 
-#: Controller/InvoicesController.php:104;195
+#: Controller/InvoicesController.php:134;225
 msgid "The invoice could not be deleted. Please, try again."
 msgstr "La factura no ha sido eliminada. Por favor, intente nuevamente."
 
+#: Controller/OwnersController.php:38;70;95
+msgid "Invalid owner"
+msgstr "Propietario inválido"
+
+#: Controller/OwnersController.php:53;74
+msgid "The owner has been saved."
+msgstr "El propietario ha sido guardado."
+
+#: Controller/OwnersController.php:56;77
+msgid "The owner could not be saved. Please, try again."
+msgstr "El propietario no ha sido guardado.. Por favor, intente nuevamente."
+
+#: Controller/OwnersController.php:99
+msgid "The owner has been deleted."
+msgstr "El propietario ha sido eliminado."
+
+#: Controller/OwnersController.php:101
+msgid "The owner could not be deleted. Please, try again."
+msgstr "El propietario no ha sido eliminado. Por favor, intente nuevamente."
+
+#: Controller/RentersController.php:38;70;95
+msgid "Invalid renter"
+msgstr "Inquilino inválido"
+
+#: Controller/RentersController.php:53;74
+msgid "The renter has been saved."
+msgstr "El inquilino ha sido guardado."
+
+#: Controller/RentersController.php:56;77
+msgid "The renter could not be saved. Please, try again."
+msgstr "El inquilino no ha sido guardado. Por favor, intente nuevamente."
+
+#: Controller/RentersController.php:99
+msgid "The renter has been deleted."
+msgstr "El inquilino ha sido eliminado."
+
+#: Controller/RentersController.php:101
+msgid "The renter could not be deleted. Please, try again."
+msgstr "El propietario no ha sido eliminado. Por favor, intente nuevamente."
+
+#: View/Elements/menu.ctp:5
+#: View/Estates/add.ctp:24
+#: View/Estates/edit.ctp:26
+#: View/Estates/view.ctp:69
+#: View/Layouts/default.ctp:48
+#: View/Owners/add.ctp:24
+#: View/Owners/edit.ctp:26
+#: View/Owners/view.ctp:72
+msgid "List Owners"
+msgstr "Listar Propietarios"
+
+#: View/Elements/menu.ctp:6
+#: View/Estates/add.ctp:25
+#: View/Estates/edit.ctp:27
+#: View/Estates/view.ctp:70
+#: View/Layouts/default.ctp:47
+#: View/Owners/index.ctp:59
+#: View/Owners/view.ctp:73
+msgid "New Owner"
+msgstr "Nuevo Propietario"
+
+#: View/Elements/menu.ctp:9
+#: View/Estates/add.ctp:26
+#: View/Estates/edit.ctp:28
+#: View/Estates/view.ctp:71
+#: View/Layouts/default.ctp:55
+#: View/Renters/add.ctp:27
+#: View/Renters/edit.ctp:29
+#: View/Renters/view.ctp:87
+msgid "List Renters"
+msgstr "Listar Inquilinos"
+
+#: View/Elements/menu.ctp:10
+#: View/Estates/add.ctp:27
+#: View/Estates/edit.ctp:29
+#: View/Estates/view.ctp:72
+#: View/Layouts/default.ctp:54
+#: View/Renters/index.ctp:65
+#: View/Renters/view.ctp:88
+msgid "New Renter"
+msgstr "Nuevo Inquilino"
+
+#: View/Elements/menu.ctp:13
+#: View/Estates/add.ctp:23
+#: View/Estates/edit.ctp:25
+#: View/Estates/view.ctp:67
+#: View/Invoices/add.ctp:26
+#: View/Invoices/edit.ctp:28
+#: View/Invoices/index.ctp:55
+#: View/Invoices/nueva.ctp:25
+#: View/Invoices/view.ctp:78
+#: View/Layouts/default.ctp:62
+#: View/Owners/add.ctp:25
+#: View/Owners/edit.ctp:27
+#: View/Owners/index.ctp:60
+#: View/Owners/view.ctp:74
+#: View/Renters/add.ctp:28
+#: View/Renters/edit.ctp:30
+#: View/Renters/index.ctp:66
+#: View/Renters/view.ctp:89
+msgid "List Estates"
+msgstr "Listar Inmuebles"
+
+#: View/Elements/menu.ctp:14
+#: View/Estates/view.ctp:68
+#: View/Layouts/default.ctp:61
+#: View/Owners/add.ctp:26
+#: View/Owners/edit.ctp:28
+#: View/Owners/index.ctp:61
+#: View/Owners/view.ctp:75
+#: View/Renters/add.ctp:29
+#: View/Renters/edit.ctp:31
+#: View/Renters/index.ctp:67
+#: View/Renters/view.ctp:90
+msgid "New Estate"
+msgstr "Nuevo Inmueble"
+
+#: View/Elements/menu.ctp:18
+#: View/Invoices/add.ctp:25
+#: View/Invoices/edit.ctp:27
+#: View/Invoices/nueva.ctp:24
+#: View/Invoices/view.ctp:76
+#: View/Items/add.ctp:20
+#: View/Items/edit.ctp:22
+#: View/Items/index.ctp:52
+#: View/Items/view.ctp:49
+#: View/Layouts/default.ctp:69
+msgid "List Invoices"
+msgstr "Listar Facturas"
+
+#: View/Elements/menu.ctp:19
+#: View/Invoices/index.ctp:54
+#: View/Invoices/view.ctp:77
+#: View/Items/add.ctp:21
+#: View/Items/edit.ctp:23
+#: View/Items/index.ctp:53
+#: View/Items/view.ctp:50
+#: View/Layouts/default.ctp:68
+msgid "New Invoice"
+msgstr "Nueva Factura"
+
 #: View/Estates/add.ctp:4
 msgid "Add Estate"
-msgstr "Crear Propiedad"
+msgstr "Crear Inmueble"
 
 #: View/Estates/add.ctp:16
 #: View/Estates/edit.ctp:17
 #: View/Invoices/add.ctp:18
 #: View/Invoices/edit.ctp:19
+#: View/Invoices/nueva.ctp:17
 #: View/Items/add.ctp:12
 #: View/Items/edit.ctp:13
 #: View/Owners/add.ctp:17
@@ -75,255 +217,173 @@ msgstr "Crear Propiedad"
 msgid "Submit"
 msgstr "Enviar"
 
-#: View/Estates/add.ctp:19
-#: View/Estates/edit.ctp:20
-#: View/Estates/index.ctp:16;58
-#: View/Estates/view.ctp:62
-#: View/Invoices/add.ctp:21
-#: View/Invoices/edit.ctp:22
-#: View/Invoices/index.ctp:18;60
+#: View/Estates/add.ctp:20
+#: View/Estates/edit.ctp:21
+#: View/Estates/index.ctp:13
+#: View/Estates/view.ctp:63
+#: View/Invoices/add.ctp:22
+#: View/Invoices/edit.ctp:23
+#: View/Invoices/index.ctp:13;52
+#: View/Invoices/nueva.ctp:21
 #: View/Invoices/view.ctp:72;96
-#: View/Items/add.ctp:15
-#: View/Items/edit.ctp:16
-#: View/Items/index.ctp:12;48
-#: View/Items/view.ctp:42
-#: View/Owners/add.ctp:20
-#: View/Owners/edit.ctp:21
-#: View/Owners/index.ctp:17;56
-#: View/Owners/view.ctp:67;93
-#: View/Renters/add.ctp:23
-#: View/Renters/edit.ctp:24
-#: View/Renters/index.ctp:20;62
-#: View/Renters/view.ctp:82;108
+#: View/Items/add.ctp:16
+#: View/Items/edit.ctp:17
+#: View/Items/index.ctp:12;49
+#: View/Items/view.ctp:43
+#: View/Owners/add.ctp:21
+#: View/Owners/edit.ctp:22
+#: View/Owners/index.ctp:17;57
+#: View/Owners/view.ctp:68
+#: View/Renters/add.ctp:24
+#: View/Renters/edit.ctp:25
+#: View/Renters/index.ctp:20;63
+#: View/Renters/view.ctp:83
 msgid "Actions"
 msgstr "Acciones"
 
-#: View/Estates/add.ctp:22
-#: View/Estates/edit.ctp:24
-#: View/Estates/view.ctp:66
-#: View/Invoices/add.ctp:25
-#: View/Invoices/edit.ctp:27
-#: View/Invoices/index.ctp:63
-#: View/Invoices/view.ctp:78
-#: View/Owners/add.ctp:24
-#: View/Owners/edit.ctp:26
-#: View/Owners/index.ctp:59
-#: View/Owners/view.ctp:73
-#: View/Renters/add.ctp:27
-#: View/Renters/edit.ctp:29
-#: View/Renters/index.ctp:65
-#: View/Renters/view.ctp:88
-msgid "List Estates"
-msgstr "Listar Propiedades"
-
-#: View/Estates/add.ctp:23
-#: View/Estates/edit.ctp:25
-#: View/Estates/index.ctp:61
-#: View/Estates/view.ctp:68
-#: View/Owners/add.ctp:23
-#: View/Owners/edit.ctp:25
-#: View/Owners/view.ctp:71
-msgid "List Owners"
-msgstr "Listar Propietarios"
-
-#: View/Estates/add.ctp:24
-#: View/Estates/edit.ctp:26
-#: View/Estates/index.ctp:62
-#: View/Estates/view.ctp:69
-#: View/Owners/index.ctp:58
-#: View/Owners/view.ctp:72
-msgid "New Owner"
-msgstr "Nuevo Propietario"
-
-#: View/Estates/add.ctp:25
-#: View/Estates/edit.ctp:27
-#: View/Estates/index.ctp:63
-#: View/Estates/view.ctp:70
-#: View/Renters/add.ctp:26
-#: View/Renters/edit.ctp:28
-#: View/Renters/view.ctp:86
-msgid "List Renters"
-msgstr "Listar Inquilinos"
-
-#: View/Estates/add.ctp:26
-#: View/Estates/edit.ctp:28
-#: View/Estates/index.ctp:64
-#: View/Estates/view.ctp:71
-#: View/Renters/index.ctp:64
-#: View/Renters/view.ctp:87
-msgid "New Renter"
-msgstr "Nuevo Inquilino"
-
 #: View/Estates/edit.ctp:4
-#: View/Estates/view.ctp:64
+#: View/Estates/view.ctp:65
 msgid "Edit Estate"
-msgstr "Editar Propiedades"
+msgstr "Editar Inmueble"
 
-#: View/Estates/edit.ctp:23
-#: View/Estates/index.ctp:38
-#: View/Invoices/edit.ctp:25
-#: View/Invoices/index.ctp:40
+#: View/Estates/edit.ctp:24
+#: View/Estates/index.ctp:33
+#: View/Invoices/edit.ctp:26
+#: View/Invoices/index.ctp:31
 #: View/Invoices/view.ctp:110
-#: View/Items/edit.ctp:19
+#: View/Items/edit.ctp:20
 #: View/Items/index.ctp:28
-#: View/Owners/edit.ctp:24
+#: View/Owners/edit.ctp:25
 #: View/Owners/index.ctp:36
-#: View/Owners/view.ctp:111
-#: View/Renters/edit.ctp:27
+#: View/Renters/edit.ctp:28
 #: View/Renters/index.ctp:42
-#: View/Renters/view.ctp:126
 msgid "Delete"
 msgstr "Eliminar"
 
-#: View/Estates/edit.ctp:23
-#: View/Estates/index.ctp:38
-#: View/Estates/view.ctp:65
-#: View/Invoices/edit.ctp:25
-#: View/Invoices/index.ctp:40
+#: View/Estates/edit.ctp:24
+#: View/Estates/index.ctp:33
+#: View/Estates/view.ctp:66
+#: View/Invoices/edit.ctp:26
+#: View/Invoices/index.ctp:31
 #: View/Invoices/view.ctp:75;110
-#: View/Items/edit.ctp:19
+#: View/Items/edit.ctp:20
 #: View/Items/index.ctp:28
-#: View/Items/view.ctp:45
-#: View/Owners/edit.ctp:24
+#: View/Items/view.ctp:46
+#: View/Owners/edit.ctp:25
 #: View/Owners/index.ctp:36
-#: View/Owners/view.ctp:70;111
-#: View/Renters/edit.ctp:27
+#: View/Owners/view.ctp:71
+#: View/Renters/edit.ctp:28
 #: View/Renters/index.ctp:42
-#: View/Renters/view.ctp:85;126
+#: View/Renters/view.ctp:86
 msgid "Are you sure you want to delete # %s?"
 msgstr "¿Está seguro que quiere eliminarlo?"
 
 #: View/Estates/index.ctp:2
 #: View/Invoices/view.ctp:64
 msgid "Estates"
-msgstr "Propiedades"
+msgstr "Inmuebles"
 
-#: View/Estates/index.ctp:36
-#: View/Invoices/index.ctp:38
+#: View/Estates/index.ctp:31
+#: View/Invoices/index.ctp:29
 #: View/Invoices/view.ctp:108
 #: View/Items/index.ctp:26
 #: View/Owners/index.ctp:34
-#: View/Owners/view.ctp:109
 #: View/Renters/index.ctp:40
-#: View/Renters/view.ctp:124
 msgid "View"
 msgstr "Ver"
 
-#: View/Estates/index.ctp:37
-#: View/Invoices/index.ctp:39
+#: View/Estates/index.ctp:32
+#: View/Invoices/index.ctp:30
 #: View/Invoices/view.ctp:109
 #: View/Items/index.ctp:27
 #: View/Owners/index.ctp:35
-#: View/Owners/view.ctp:110
 #: View/Renters/index.ctp:41
-#: View/Renters/view.ctp:125
 msgid "Edit"
 msgstr "Editar"
 
-#: View/Estates/index.ctp:46
-#: View/Invoices/index.ctp:48
+#: View/Estates/index.ctp:41
+#: View/Invoices/index.ctp:39
 #: View/Items/index.ctp:36
 #: View/Owners/index.ctp:44
 #: View/Renters/index.ctp:50
 msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
 msgstr "Página {:page} de {:pages}, mostrando {:current} registros de un total de {:count}, empezando en {:start} y terminando en {:end}"
 
-#: View/Estates/index.ctp:51
-#: View/Invoices/index.ctp:53
+#: View/Estates/index.ctp:47
+#: View/Invoices/index.ctp:44
 #: View/Items/index.ctp:41
 #: View/Owners/index.ctp:49
 #: View/Renters/index.ctp:55
 msgid "previous"
 msgstr "anterior"
 
-#: View/Estates/index.ctp:53
-#: View/Invoices/index.ctp:55
+#: View/Estates/index.ctp:49
+#: View/Invoices/index.ctp:46
 #: View/Items/index.ctp:43
 #: View/Owners/index.ctp:51
 #: View/Renters/index.ctp:57
 msgid "next"
 msgstr "próximo"
 
-#: View/Estates/index.ctp:60
-#: View/Estates/view.ctp:67
-#: View/Owners/add.ctp:25
-#: View/Owners/edit.ctp:27
-#: View/Owners/index.ctp:60
-#: View/Owners/view.ctp:74;120
-#: View/Renters/add.ctp:28
-#: View/Renters/edit.ctp:30
-#: View/Renters/index.ctp:66
-#: View/Renters/view.ctp:89;135
-msgid "New Estate"
-msgstr "Nueva Propiedad"
-
 #: View/Estates/view.ctp:2
 msgid "Estate"
-msgstr "Propiedad"
+msgstr "Inmueble"
 
 #: View/Estates/view.ctp:4
 #: View/Invoices/view.ctp:4;89
 #: View/Items/view.ctp:4
-#: View/Owners/view.ctp:4;82
-#: View/Renters/view.ctp:4;97
+#: View/Owners/view.ctp:4
+#: View/Renters/view.ctp:4
 msgid "Id"
 msgstr "ID"
 
 #: View/Estates/view.ctp:9
-#: View/Owners/view.ctp:83
-#: View/Renters/view.ctp:98
-msgid "Numeroficha"
+msgid "ficha"
 msgstr "Número Ficha"
 
 #: View/Estates/view.ctp:14
 #: View/Invoices/view.ctp:9
-#: View/Owners/view.ctp:9;84
-#: View/Renters/view.ctp:9;99
+#: View/Owners/view.ctp:9
+#: View/Renters/view.ctp:9
 msgid "Name"
 msgstr "Nombre"
 
 #: View/Estates/view.ctp:19
 #: View/Invoices/view.ctp:14
-#: View/Owners/view.ctp:14;85
-#: View/Renters/view.ctp:14;100
+#: View/Owners/view.ctp:14
+#: View/Renters/view.ctp:14
 msgid "Address"
 msgstr "Domicilio"
 
 #: View/Estates/view.ctp:24
 #: View/Invoices/view.ctp:92
 #: View/Items/view.ctp:19
-#: View/Owners/view.ctp:86
-#: View/Renters/view.ctp:101
 msgid "Price"
 msgstr "Precio"
 
 #: View/Estates/view.ctp:29
 #: View/Invoices/view.ctp:39
-#: View/Owners/view.ctp:87
-#: View/Renters/view.ctp:102
 msgid "Contract Start"
 msgstr "Comienzo de Contrato"
 
 #: View/Estates/view.ctp:34
 #: View/Invoices/view.ctp:44
-#: View/Owners/view.ctp:88
-#: View/Renters/view.ctp:103
 msgid "Contract End"
 msgstr "Fin de Contrato"
 
 #: View/Estates/view.ctp:39
 #: View/Invoices/view.ctp:54;93
 #: View/Items/view.ctp:24
-#: View/Owners/view.ctp:54;89
-#: View/Renters/view.ctp:69;104
+#: View/Owners/view.ctp:54
+#: View/Renters/view.ctp:69
 msgid "Created"
 msgstr "Creado"
 
 #: View/Estates/view.ctp:44
 #: View/Invoices/view.ctp:59;94
 #: View/Items/view.ctp:29
-#: View/Owners/view.ctp:59;90
-#: View/Renters/view.ctp:74;105
+#: View/Owners/view.ctp:59
+#: View/Renters/view.ctp:74
 msgid "Modified"
 msgstr "Modificado"
 
@@ -338,47 +398,41 @@ msgstr "Propietario"
 msgid "Renter"
 msgstr "Inquilino"
 
-#: View/Estates/view.ctp:65
+#: View/Estates/view.ctp:66
 msgid "Delete Estate"
-msgstr "Eliminar Propiedad"
+msgstr "Eliminar Inmueble"
 
 #: View/Invoices/add.ctp:4
+#: View/Invoices/nueva.ctp:4
 msgid "Add Invoice"
 msgstr "Crear Factura"
 
-#: View/Invoices/add.ctp:24
-#: View/Invoices/edit.ctp:26
-#: View/Invoices/view.ctp:76
-#: View/Items/add.ctp:19
-#: View/Items/edit.ctp:21
-#: View/Items/index.ctp:51
-#: View/Items/view.ctp:48
-msgid "List Invoices"
-msgstr "Listar Facturas"
-
-#: View/Invoices/add.ctp:26
-#: View/Invoices/edit.ctp:28
-#: View/Invoices/index.ctp:64
-#: View/Invoices/view.ctp:79
-msgid "New Estates"
-msgstr "Nueva Propiedad"
-
 #: View/Invoices/add.ctp:27
 #: View/Invoices/edit.ctp:29
-#: View/Invoices/index.ctp:65
-#: View/Invoices/view.ctp:80
-#: View/Items/add.ctp:18
-#: View/Items/edit.ctp:20
-#: View/Items/view.ctp:46
-msgid "List Items"
-msgstr "Listar Items"
+#: View/Invoices/index.ctp:56
+#: View/Invoices/nueva.ctp:26
+#: View/Invoices/view.ctp:79
+msgid "New Estates"
+msgstr "Nuevo Inmueble"
 
 #: View/Invoices/add.ctp:28
 #: View/Invoices/edit.ctp:30
-#: View/Invoices/index.ctp:66
-#: View/Invoices/view.ctp:81;119
-#: View/Items/index.ctp:50
+#: View/Invoices/index.ctp:57
+#: View/Invoices/nueva.ctp:27
+#: View/Invoices/view.ctp:80
+#: View/Items/add.ctp:19
+#: View/Items/edit.ctp:21
 #: View/Items/view.ctp:47
+msgid "List Items"
+msgstr "Listar Items"
+
+#: View/Invoices/add.ctp:29
+#: View/Invoices/edit.ctp:31
+#: View/Invoices/index.ctp:58
+#: View/Invoices/nueva.ctp:28
+#: View/Invoices/view.ctp:81;119
+#: View/Items/index.ctp:51
+#: View/Items/view.ctp:48
 msgid "New Item"
 msgstr "Nuevo Item"
 
@@ -390,15 +444,6 @@ msgstr "Editar Factura"
 #: View/Invoices/index.ctp:2
 msgid "Invoices"
 msgstr "Facturas"
-
-#: View/Invoices/index.ctp:62
-#: View/Invoices/view.ctp:77
-#: View/Items/add.ctp:20
-#: View/Items/edit.ctp:22
-#: View/Items/index.ctp:52
-#: View/Items/view.ctp:49
-msgid "New Invoice"
-msgstr "Nueva Factura"
 
 #: View/Invoices/view.ctp:2
 #: View/Items/view.ctp:34
@@ -448,7 +493,7 @@ msgid "Add Item"
 msgstr "Crear Item"
 
 #: View/Items/edit.ctp:4
-#: View/Items/view.ctp:44
+#: View/Items/view.ctp:45
 msgid "Edit Item"
 msgstr "Editar Item"
 
@@ -460,7 +505,7 @@ msgstr "Items"
 msgid "Item"
 msgstr "Item"
 
-#: View/Items/view.ctp:45
+#: View/Items/view.ctp:46
 msgid "Delete Item"
 msgstr "Eliminar Item"
 
@@ -469,7 +514,7 @@ msgid "Add Owner"
 msgstr "Crear Propietario"
 
 #: View/Owners/edit.ctp:4
-#: View/Owners/view.ctp:69
+#: View/Owners/view.ctp:70
 msgid "Edit Owner"
 msgstr "Editar Propietario"
 
@@ -512,31 +557,16 @@ msgstr ""
 msgid "Consumidorfinal"
 msgstr ""
 
-#: View/Owners/view.ctp:70
+#: View/Owners/view.ctp:71
 msgid "Delete Owner"
 msgstr "Eliminar Propietario"
-
-#: View/Owners/view.ctp:78
-#: View/Renters/view.ctp:93
-msgid "Related Estates"
-msgstr ""
-
-#: View/Owners/view.ctp:91
-#: View/Renters/view.ctp:106
-msgid "Owner Id"
-msgstr "ID Propietario"
-
-#: View/Owners/view.ctp:92
-#: View/Renters/view.ctp:107
-msgid "Renter Id"
-msgstr "ID Inquilino"
 
 #: View/Renters/add.ctp:4
 msgid "Add Renter"
 msgstr "Crear Inquilino"
 
 #: View/Renters/edit.ctp:4
-#: View/Renters/view.ctp:84
+#: View/Renters/view.ctp:85
 msgid "Edit Renter"
 msgstr "Editar Inquilino"
 
@@ -556,252 +586,37 @@ msgstr "Provincia"
 msgid "Dni"
 msgstr "DNI"
 
-#: View/Renters/view.ctp:85
+#: View/Renters/view.ctp:86
 msgid "Delete Renter"
 msgstr "Eliminar Inquilino"
 
-#: View/Errors/error400.ctp:21
-#: View/Errors/error500.ctp:21
-msgid "Error"
+#: Model/Estate.php:validation
+#: for field name;validation address;validation
+#: owner Model/Invoice.php:validation
+msgid "notEmpty"
 msgstr ""
 
-#: View/Errors/error400.ctp:23
-msgid "The requested address %s was not found on this server."
-msgstr "La acción requerida no fue encontrada en el servidor."
+#: Model/Estate.php:validation
+#: for field price Model/Invoice.php:validation
+msgid "numeric"
+msgstr "numérico"
 
-#: View/Errors/error500.ctp:22
-msgid "An Internal Error Has Occurred."
+#: Model/Estate.php:validation
+#: for field contract_start;validation
+#: contract_end Model/Invoice.php:validation
+msgid "datetime"
 msgstr ""
 
-#: View/Layouts/default.ctp:19
-#: View/Layouts/error.ctp:19
-msgid "CakePHP: the rapid development php framework"
+#: Model/Invoice.php:validation
+#: for field estates_id
+msgid "uuid"
 msgstr ""
 
-#: View/Pages/home.ctp:16
-msgid "Release Notes for CakePHP %s."
-msgstr ""
+#~ msgid "Owner Id"
+#~ msgstr "ID Propietario"
 
-#: View/Pages/home.ctp:18
-msgid "Read the changelog"
-msgstr ""
+#~ msgid "Renter Id"
+#~ msgstr "ID Inquilino"
 
-#: View/Pages/home.ctp:29
-msgid "URL rewriting is not properly configured on your server."
-msgstr ""
-
-#: View/Pages/home.ctp:40
-msgid "Your version of PHP is 5.2.8 or higher."
-msgstr ""
-
-#: View/Pages/home.ctp:44
-msgid "Your version of PHP is too low. You need PHP 5.2.8 or higher to use CakePHP."
-msgstr ""
-
-#: View/Pages/home.ctp:53
-msgid "Your tmp directory is writable."
-msgstr ""
-
-#: View/Pages/home.ctp:57
-msgid "Your tmp directory is NOT writable."
-msgstr ""
-
-#: View/Pages/home.ctp:67
-msgid "The %s is being used for core caching. To change the config edit %s"
-msgstr ""
-
-#: View/Pages/home.ctp:71
-msgid "Your cache is NOT working. Please check the settings in %s"
-msgstr ""
-
-#: View/Pages/home.ctp:81
-msgid "Your database configuration file is present."
-msgstr ""
-
-#: View/Pages/home.ctp:86
-msgid "Your database configuration file is NOT present."
-msgstr ""
-
-#: View/Pages/home.ctp:88
-msgid "Rename %s to %s"
-msgstr ""
-
-#: View/Pages/home.ctp:113
-msgid "CakePHP is able to connect to the database."
-msgstr ""
-
-#: View/Pages/home.ctp:117
-msgid "CakePHP is NOT able to connect to the database."
-msgstr ""
-
-#: View/Pages/home.ctp:129
-msgid "PCRE has not been compiled with Unicode support."
-msgstr ""
-
-#: View/Pages/home.ctp:131
-msgid "Recompile PCRE with Unicode support by adding <code>--enable-unicode-properties</code> when configuring"
-msgstr ""
-
-#: View/Pages/home.ctp:140
-msgid "DebugKit plugin is present"
-msgstr ""
-
-#: View/Pages/home.ctp:144
-msgid "DebugKit is not installed. It will help you inspect and debug different aspects of your application."
-msgstr ""
-
-#: View/Pages/home.ctp:146
-msgid "You can install it from %s"
-msgstr ""
-
-#: View/Pages/home.ctp:152
-msgid "Editing this Page"
-msgstr ""
-
-#: View/Pages/home.ctp:155
-msgid ""
-"To change the content of this page, edit: %s.<br />\n"
-"To change its layout, edit: %s.<br />\n"
-"You can also add some CSS styles for your pages at: %s."
-msgstr ""
-
-#: View/Pages/home.ctp:162
-msgid "Getting Started"
-msgstr ""
-
-#: View/Pages/home.ctp:166
-msgid "New"
-msgstr ""
-
-#: View/Pages/home.ctp:166
-msgid "CakePHP 2.0 Docs"
-msgstr ""
-
-#: View/Pages/home.ctp:175
-msgid "The 15 min Blog Tutorial"
-msgstr ""
-
-#: View/Pages/home.ctp:182
-msgid "Official Plugins"
-msgstr ""
-
-#: View/Pages/home.ctp:187
-msgid "provides a debugging toolbar and enhanced debugging tools for CakePHP applications."
-msgstr ""
-
-#: View/Pages/home.ctp:191
-msgid "contains various localized validation classes and translations for specific countries"
-msgstr ""
-
-#: View/Pages/home.ctp:196
-msgid "More about CakePHP"
-msgstr ""
-
-#: View/Pages/home.ctp:198
-msgid "CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC."
-msgstr ""
-
-#: View/Pages/home.ctp:201
-msgid "Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility."
-msgstr ""
-
-#: View/Pages/home.ctp:206
-msgid "The Rapid Development Framework"
-msgstr ""
-
-#: View/Pages/home.ctp:207
-msgid "CakePHP Documentation"
-msgstr ""
-
-#: View/Pages/home.ctp:208
-msgid "Your Rapid Development Cookbook"
-msgstr ""
-
-#: View/Pages/home.ctp:209
-msgid "CakePHP API"
-msgstr ""
-
-#: View/Pages/home.ctp:210
-msgid "Quick API Reference"
-msgstr ""
-
-#: View/Pages/home.ctp:211
-msgid "The Bakery"
-msgstr ""
-
-#: View/Pages/home.ctp:212
-msgid "Everything CakePHP"
-msgstr ""
-
-#: View/Pages/home.ctp:213
-msgid "CakePHP Plugins"
-msgstr ""
-
-#: View/Pages/home.ctp:214
-msgid "A comprehensive list of all CakePHP plugins created by the community"
-msgstr ""
-
-#: View/Pages/home.ctp:215
-msgid "CakePHP Community Center"
-msgstr ""
-
-#: View/Pages/home.ctp:216
-msgid "Everything related to the CakePHP community in one place"
-msgstr ""
-
-#: View/Pages/home.ctp:217
-msgid "CakePHP Google Group"
-msgstr ""
-
-#: View/Pages/home.ctp:218
-msgid "Community mailing list"
-msgstr ""
-
-#: View/Pages/home.ctp:220
-msgid "Live chat about CakePHP"
-msgstr ""
-
-#: View/Pages/home.ctp:221
-msgid "CakePHP Code"
-msgstr ""
-
-#: View/Pages/home.ctp:222
-msgid "Find the CakePHP code on GitHub and contribute to the framework"
-msgstr ""
-
-#: View/Pages/home.ctp:223;224
-msgid "CakePHP Issues"
-msgstr ""
-
-#: View/Pages/home.ctp:225;226
-msgid "CakePHP Roadmaps"
-msgstr ""
-
-#: View/Pages/home.ctp:227
-msgid "Training"
-msgstr ""
-
-#: View/Pages/home.ctp:228
-msgid "Join a live session and get skilled with the framework"
-msgstr ""
-
-#: View/Pages/home.ctp:229
-msgid "CakeFest"
-msgstr ""
-
-#: View/Pages/home.ctp:230
-msgid "Don't miss our annual CakePHP conference"
-msgstr ""
-
-#: View/Pages/home.ctp:231
-msgid "Cake Software Foundation"
-msgstr ""
-
-#: View/Pages/home.ctp:232
-msgid "Promoting development related to CakePHP"
-msgstr ""
-
-#: webroot/test.php:93
-msgid "Debug setting does not allow access to this url."
-msgstr ""
-
+#~ msgid "The requested address %s was not found on this server."
+#~ msgstr "La acción requerida no fue encontrada en el servidor."

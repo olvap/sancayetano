@@ -3,12 +3,12 @@
 		<h1><?php echo __('Owners'); ?></h1>
 		<table cellpadding="0" cellspacing="0" class="table">
 			<tr>
-					<th><?php echo $this->Paginator->sort('Person.name', 'Nombre'); ?></th>
-					<th><?php echo $this->Paginator->sort('Person.address', 'Dirección'); ?></th>
-					<th><?php echo $this->Paginator->sort('Person.telephone', 'Teléfono'); ?></th>
-					<th><?php echo $this->Paginator->sort('Person.email', 'Email'); ?></th>
-					<th><?php echo $this->Paginator->sort('Person.cuit', 'CUIT'); ?></th>
-					<th class="actions"><?php echo __('Actions'); ?></th>
+				<th><?php echo $this->Paginator->sort('Person.name', 'Nombre'); ?></th>
+				<th><?php echo $this->Paginator->sort('Person.address', 'Dirección'); ?></th>
+				<th><?php echo $this->Paginator->sort('Person.telephone', 'Teléfono'); ?></th>
+				<th><?php echo $this->Paginator->sort('Person.email', 'Email'); ?></th>
+				<th><?php echo $this->Paginator->sort('Person.cuit', 'CUIT'); ?></th>
+				<th class="actions"><?php echo __('Actions'); ?></th>
 			</tr>
 			<?php foreach ($owners as $owner): ?>
 				<tr>

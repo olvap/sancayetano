@@ -1,21 +1,67 @@
-<div class="renters form">
-<?php echo $this->Form->create('Renter'); ?>
-	<fieldset>
-		<legend><?php echo __('Edit Renter'); ?></legend>
-	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('person_id');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
+<div class="row">
+	<div class="col-sm-12">
+		
+		<?php echo $this->Form->create('Renter', array('class'=>'form-horizontal', 'role'=>'form')); ?>
+			<fieldset>
+				<legend><?php echo __('Edit Renter'); ?></legend>
+				
+				<?php
+					echo $this->Form->input('id');
+					echo $this->Form->input('Person.id');
+					echo $this->Form->input('Person.name'
+						, array('class'=>'form-control'
+							, 'div'=>'form-group'
+							, 'label' => array('class' => 'col-sm-2 control-label')
+							, 'between' => '<div class="col-sm-8">'
+							, 'after' => '</div>')
+					);
+					echo $this->Form->input('Person.address'
+						, array('class'=>'form-control'
+							, 'div'=>'form-group'
+							, 'label' => array('class' => 'col-sm-2 control-label')
+							, 'between' => '<div class="col-sm-8">'
+							, 'after' => '</div>')
+					);
+					echo $this->Form->input('Person.telephone'
+						, array('class'=>'form-control'
+							, 'div'=>'form-group'
+							, 'label' => array('class' => 'col-sm-2 control-label')
+							, 'between' => '<div class="col-sm-8">'
+							, 'after' => '</div>')
+					);
+					echo $this->Form->input('Person.email'
+						, array('class'=>'form-control'
+							, 'div'=>'form-group'
+							, 'label' => array('class' => 'col-sm-2 control-label')
+							, 'between' => '<div class="col-sm-8">'
+							, 'after' => '</div>')
+					);
+					echo $this->Form->input('Person.cuit'
+						, array('class'=>'form-control'
+							, 'div'=>'form-group'
+							, 'label' => array('class' => 'col-sm-2 control-label')
+							, 'between' => '<div class="col-sm-8">'
+							, 'after' => '</div>')
+					);
+					echo $this->Form->input('Person.iva_id'
+						, array('class'=>'form-control'
+							, 'div'=>'form-group'
+							, 'label' => array('class' => 'col-sm-2 control-label')
+							, 'between' => '<div class="col-sm-8">'
+							, 'after' => '</div>')
+					);
+				?>
+			
+			</fieldset>
 
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Renter.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Renter.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Renters'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Estates'), array('controller' => 'estates', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Estate'), array('controller' => 'estates', 'action' => 'add')); ?> </li>
-	</ul>
+			<?php echo $this->Form->input(__('Submit'), array('class'=>'btn btn-primary'
+				, 'div'=>'form-group'
+				, 'label' => false
+				, 'between' => '<div class="col-sm-8 col-sm-offset-2">'
+				, 'after' => '</div>'
+				, 'type' => 'submit')
+			);
+			?>
+		<?php echo $this->Form->end(); ?>
+	</div>
 </div>
