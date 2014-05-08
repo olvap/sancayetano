@@ -13,7 +13,7 @@
 		echo $this->Form->input('contract_start');
 		echo $this->Form->input('contract_end');
 		echo $this->Form->input('cae');
-		echo $this->Form->input('estates_id');
+		echo $this->Form->input('estate_id');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

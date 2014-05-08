@@ -21,8 +21,22 @@ class EstatesController extends AppController {
  * @return void
  */
 	public function index() {
-		$this->Estate->recursive = 0;
+		// $this->Estate->Behaviors->load('Containable');
+		// $this->Estate->recursive = -1;
+		// debug($this->Estate->Owner->getVirtualField('name'));
+		// $this->Estate->Owner->virtualFields['name'] = $this->Estate->Owner->getVirtualField('name');
+		// // $this->Estate->contain(array('Owner'=>array('Person')));
+		// $hola = $this->Estate->find('all', array('contain' => array('Owner'=>array('Person'))));
+		// debug($hola);
+
+		// $this->paginate['Estate'] = array(
+		// 	'contain' => array('Owner'=>array('Person')),
+		// );
+
+		// debug($this->paginate('Estate'));
+
 		$this->set('estates', $this->Paginator->paginate());
+		// $this->set('estates', $this->paginate('Estate'));
 	}
 
 /**

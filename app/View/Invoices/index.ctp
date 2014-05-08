@@ -8,19 +8,33 @@
 				<th><?php echo $this->Paginator->sort('subtotal'); ?></th>
 				<th><?php echo $this->Paginator->sort('iva'); ?></th>
 				<th><?php echo $this->Paginator->sort('total'); ?></th>
-				<th><?php echo $this->Paginator->sort('cae'); ?></th>
-				<th><?php echo $this->Paginator->sort('estates_id'); ?></th>
+				<th><?php echo $this->Paginator->sort('estate_id'); ?></th>
 				<th class="actions"><?php echo __('Actions'); ?></th>
 		</tr>
 		<?php foreach ($invoices as $invoice): ?>
 			<tr>
-				<td><?php echo h($invoice['Invoice']['created']); ?>&nbsp;</td>
+				<td class="text-center">
+					<?php 
+					echo $this->Time->format($invoice['Invoice']['created'], '%d-%m-%Y'); 
+					?>&nbsp;
+				</td>
 				<td><?php echo h($invoice['Invoice']['name']); ?>&nbsp;</td>
 				<td><?php echo h($invoice['Invoice']['address']); ?>&nbsp;</td>
-				<td><?php echo h($invoice['Invoice']['subtotal']); ?>&nbsp;</td>
-				<td><?php echo h($invoice['Invoice']['iva']); ?>&nbsp;</td>
-				<td><?php echo h($invoice['Invoice']['total']); ?>&nbsp;</td>
-				<td><?php echo h($invoice['Invoice']['cae']); ?>&nbsp;</td>
+				<td class="text-center">
+					<?php
+					echo $this->Number->currency($invoice['Invoice']['subtotal'], 'ARG');
+					?>&nbsp;
+				</td>
+				<td class="text-center">
+					<?php
+					echo $this->Number->currency($invoice['Invoice']['iva'], 'ARG');
+					?>&nbsp;
+				</td>
+				<td class="text-center">
+					<?php
+					echo $this->Number->currency($invoice['Invoice']['total'], 'ARG');
+					?>&nbsp;
+				</td>
 				<td>
 					<?php echo $this->Html->link($invoice['Estate']['name'], array('controller' => 'estates', 'action' => 'view', $invoice['Estate']['id'])); ?>
 				</td>

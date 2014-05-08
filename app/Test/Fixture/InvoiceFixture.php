@@ -20,7 +20,7 @@ class InvoiceFixture extends CakeTestFixture {
 		'contract_end' => array('type' => 'datetime', 'null' => false, 'default' => null),
 		'created' => array('type' => 'datetime', 'null' => false, 'default' => null),
 		'modified' => array('type' => 'datetime', 'null' => false, 'default' => null),
-		'estates_id' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 36, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'estate_id' => array('type' => 'string', 'null' => false, 'default' => null, 'length' => 36, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
@@ -43,7 +43,7 @@ class InvoiceFixture extends CakeTestFixture {
 			'contract_end' => '2014-04-27 17:48:50',
 			'created' => '2014-04-27 17:48:50',
 			'modified' => '2014-04-27 17:48:50',
-			'estates_id' => 'Lorem ipsum dolor sit amet'
+			'estate_id' => 'Lorem ipsum dolor sit amet'
 		),
 	);
 

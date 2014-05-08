@@ -34,7 +34,7 @@
 							, 'after' => '</div>')
 					);
 					echo $this->Form->input('contract_start'
-						, array('class'=>'form-control'
+						, array('class'=>'form-control date'
 							, 'dateFormat' => 'DMY'
 							, 'div'=>'form-group'
 							, 'label' => array('class' => 'col-sm-2 control-label')
@@ -42,7 +42,7 @@
 							, 'after' => '</div>')
 					);
 					echo $this->Form->input('contract_end'
-						, array('class'=>'form-control'
+						, array('class'=>'form-control date'
 							, 'dateFormat' => 'DMY'
 							, 'div'=>'form-group'
 							, 'label' => array('class' => 'col-sm-2 control-label')
@@ -59,6 +59,7 @@
 					echo $this->Form->input('renter_id'
 						, array('class'=>'form-control'
 							, 'div'=>'form-group'
+							, 'empty' => '(Seleccionar un Inquilino)'
 							, 'label' => array('class' => 'col-sm-2 control-label')
 							, 'between' => '<div class="col-sm-8">'
 							, 'after' => '</div>')
@@ -79,7 +80,7 @@
 	</div>
 </div>
 
-
+<!-- 
 
 <div class="estates form">
 <?php echo $this->Form->create('Estate'); ?>
@@ -97,4 +98,4 @@
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
-</div>
+</div> -->

@@ -14,12 +14,24 @@
 		</tr>
 		<?php foreach ($estates as $estate): ?>
 			<tr>
-				<td><?php echo h($estate['Estate']['ficha']); ?>&nbsp;</td>
+				<td class="text-center"><?php echo h($estate['Estate']['ficha']); ?>&nbsp;</td>
 				<td><?php echo h($estate['Estate']['name']); ?>&nbsp;</td>
 				<td><?php echo h($estate['Estate']['address']); ?>&nbsp;</td>
-				<td><?php echo h($estate['Estate']['price']); ?>&nbsp;</td>
-				<td><?php echo h($estate['Estate']['contract_start']); ?>&nbsp;</td>
-				<td><?php echo h($estate['Estate']['contract_end']); ?>&nbsp;</td>
+				<td class="text-center">
+					<?php
+					echo $this->Number->currency($estate['Estate']['price'], 'ARG');
+					?>&nbsp;
+				</td>
+				<td class="text-center">
+					<?php 
+					echo $this->Time->format($estate['Estate']['contract_start'], '%d-%m-%Y'); 
+					?>&nbsp;
+				</td>
+				<td class="text-center">
+					<?php 
+					echo $this->Time->format($estate['Estate']['contract_end'], '%d-%m-%Y'); 
+					?>&nbsp;
+				</td>
 				<td>
 					<?php echo $this->Html->link($estate['Owner']['name'], array('controller' => 'owners', 'action' => 'view', $estate['Owner']['id'])); ?>
 				</td>

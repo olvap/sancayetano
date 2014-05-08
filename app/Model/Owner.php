@@ -8,10 +8,16 @@ App::uses('AppModel', 'Model');
  */
 class Owner extends AppModel {
 	
-	public $displayField = 'name';
+	// public $displayField = 'name';
 	
+	// public $actsAs = array('Containable');
+
+	// $this->$virtualField['name'] = $this->Person->name;
+
+
 	public $virtualFields = array(
-		'name' => "Person.name"
+		// 'name' => "Person.name"
+		'name' => 'SELECT name FROM people WHERE Owner.person_id = people.id'
 	);
 
 /**

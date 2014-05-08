@@ -87,9 +87,9 @@ class Estate extends AppModel {
 			),
 		),
 		'contract_start' => array(
-			'datetime' => array(
-				'rule' => array('datetime'),
-				//'message' => 'Your custom message here',
+			'date' => array(
+				'rule' => array('date'),
+				'message' => 'Verifique la fecha',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule
@@ -97,9 +97,9 @@ class Estate extends AppModel {
 			),
 		),
 		'contract_end' => array(
-			'datetime' => array(
-				'rule' => array('datetime'),
-				//'message' => 'Your custom message here',
+			'date' => array(
+				'rule' => array('date'),
+				'message' => 'Verifique la fecha',
 				//'allowEmpty' => false,
 				//'required' => false,
 				//'last' => false, // Stop validation after this rule

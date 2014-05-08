@@ -20,6 +20,8 @@
  */
 
 App::uses('Controller', 'Controller');
+App::uses('CakeNumber', 'Utility');
+CakeNumber::addFormat('ARG', array('before' => '$ ', 'thousands' => '.', 'decimals' => ','));
 
 Configure::write('Config.language', 'esp');  
 

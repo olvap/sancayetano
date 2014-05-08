@@ -767,7 +767,7 @@ msgstr ""
 msgid "datetime"
 msgstr ""
 
-#: Model/Invoice.php:validation for field estates_id
+#: Model/Invoice.php:validation for field estate_id
 #: Model/Owner.php:validation for field person_id
 #: Model/Renter.php:validation for field person_id
 msgid "uuid"

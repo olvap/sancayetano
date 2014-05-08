@@ -8,10 +8,11 @@ App::uses('AppModel', 'Model');
  */
 class Renter extends AppModel {
 
-	public $displayField = 'name';
+	// public $displayField = 'name';
 
 	public $virtualFields = array(
-		'name' => "Person.name"
+		// 'name' => "Person.name"
+		'name' => 'SELECT name FROM people WHERE Renter.person_id = people.id'
 	);
 
 /**

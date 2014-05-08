@@ -82,7 +82,7 @@ App::uses('AppModel', 'Model');
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'estates_id' => array(
+		'estate_id' => array(
 			'uuid' => array(
 				'rule' => array('uuid'),
 				//'message' => 'Your custom message here',
@@ -104,7 +104,7 @@ App::uses('AppModel', 'Model');
 	public $belongsTo = array(
 		'Estate' => array(
 			'className' => 'Estate',
-			'foreignKey' => 'estates_id',
+			'foreignKey' => 'estate_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

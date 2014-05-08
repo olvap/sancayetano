@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: San Cayetano\n"
 "POT-Creation-Date: 2014-05-08 09:31-0300\n"
-"PO-Revision-Date: 2014-05-08 09:39-0300\n"
+"PO-Revision-Date: 2014-05-08 10:05-0300\n"
 "Last-Translator: Ale Prieto <aleprieto@gmail.com>\n"
 "Language-Team: Colectivo Libre <contacto@colectivolibre.com.ar>\n"
 "Language: \n"
@@ -28,7 +28,7 @@ msgstr "El inmueble ha sido guardado."
 
 #: Controller/EstatesController.php:55;87;156;180
 msgid "The estate could not be saved. Please, try again."
-msgstr "El propietario no ha sido guardado. Por favor, intente nuevamente."
+msgstr "El inmueble no ha sido guardado. Por favor, intente nuevamente."
 
 #: Controller/EstatesController.php:112;205
 msgid "The estate has been deleted."
@@ -772,7 +772,7 @@ msgid "datetime"
 msgstr ""
 
 #: Model/Invoice.php:validation
-#: for field estates_id
+#: for field estate_id
 #: Model/Owner.php:validation
 #: person_id Model/Renter.php:validation
 msgid "uuid"
