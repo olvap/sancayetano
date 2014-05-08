@@ -8,6 +8,12 @@ App::uses('AppModel', 'Model');
  */
 class Renter extends AppModel {
 
+	public $displayField = 'name';
+
+	public $virtualFields = array(
+		'name' => "Person.name"
+	);
+
 /**
  * Validation rules
  *

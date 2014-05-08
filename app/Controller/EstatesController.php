@@ -55,10 +55,17 @@ class EstatesController extends AppController {
 				$this->Session->setFlash(__('The estate could not be saved. Please, try again.'));
 			}
 		}
-		$owners = $this->Estate->Owner->find('list', array('fields' => array('Owner.id', 'Owner.name')));
-		$renters = $this->Estate->Renter->find('list');
+		$owners = $this->Estate->Owner->find('list'
+			, array('fields' => array('Owner.id', 'Owner.name')
+				, 'recursive' => 1
+			)
+		);
+		$renters = $this->Estate->Renter->find('list'
+			, array('fields' => array('Renter.id', 'Renter.name')
+				, 'recursive' => 1
+			)
+		);
 		$this->set(compact('owners', 'renters'));
-		debug($owners, $showHtml = null, $showFrom = true);	
 	}
 
 /**
