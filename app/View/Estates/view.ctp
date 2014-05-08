@@ -1,12 +1,7 @@
 <div class="estates view">
 <h2><?php echo __('Estate'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($estate['Estate']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('ficha'); ?></dt>
+	<dl class="dl-horizontal">
+			<dt><?php echo __('ficha'); ?></dt>
 		<dd>
 			<?php echo h($estate['Estate']['ficha']); ?>
 			&nbsp;
@@ -23,27 +18,17 @@
 		</dd>
 		<dt><?php echo __('Price'); ?></dt>
 		<dd>
-			<?php echo h($estate['Estate']['price']); ?>
+			<?php echo $this->Number->currency($estate['Estate']['price'], 'ARG'); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Contract Start'); ?></dt>
 		<dd>
-			<?php echo h($estate['Estate']['contract_start']); ?>
+			<?php echo $this->Time->format($estate['Estate']['contract_start'], '%d-%m-%Y'); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Contract End'); ?></dt>
 		<dd>
-			<?php echo h($estate['Estate']['contract_end']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Created'); ?></dt>
-		<dd>
-			<?php echo h($estate['Estate']['created']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
-		<dd>
-			<?php echo h($estate['Estate']['modified']); ?>
+			<?php echo $this->Time->format($estate['Estate']['contract_end'], '%d-%m-%Y'); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Owner'); ?></dt>
@@ -58,18 +43,3 @@
 		</dd>
 	</dl>
 </div>
-<!--
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Estate'), array('action' => 'edit', $estate['Estate']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Estate'), array('action' => 'delete', $estate['Estate']['id']), null, __('Are you sure you want to delete # %s?', $estate['Estate']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Estates'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Estate'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Owners'), array('controller' => 'owners', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Owner'), array('controller' => 'owners', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Renters'), array('controller' => 'renters', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Renter'), array('controller' => 'renters', 'action' => 'add')); ?> </li>
-	</ul>
-</div>-->
-<?php echo $this->element('menu'); ?>

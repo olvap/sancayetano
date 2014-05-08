@@ -9,6 +9,17 @@ App::uses('AppModel', 'Model');
  */
 class Estate extends AppModel {
 
+	public $virtualFields = array(
+		'renter_name' => 'SELECT P.name 
+			FROM renters R, people P 
+			WHERE Estate.renter_id = R.id
+			AND R.person_id = P.id'
+		, 'owner_name' => 'SELECT P.name 
+			FROM owners O, people P 
+			WHERE Estate.owner_id = O.id
+			AND O.person_id = P.id'
+	);
+
 /**
  * Display field
  *

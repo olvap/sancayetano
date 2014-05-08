@@ -1,70 +1,71 @@
+<?php //debug($owner) ?>
 <div class="owners view">
-<h2><?php echo __('Owner'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
+	<h2><?php echo __('Owner'); ?></h2>
+	<dl class="dl-horizontal">
+		<dt>Nombre</dt>
 		<dd>
-			<?php echo h($owner['Owner']['id']); ?>
+			<?php echo h($owner['Person']['name']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Created'); ?></dt>
+		<dt>Dirección</dt>
 		<dd>
-			<?php echo h($owner['Owner']['created']); ?>
+			<?php echo h($owner['Person']['address']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
+		<dt>Teléfono</dt>
 		<dd>
-			<?php echo h($owner['Owner']['modified']); ?>
+			<?php echo h($owner['Person']['telephone']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Person Id'); ?></dt>
+		<dt>Email</dt>
 		<dd>
-			<?php echo h($owner['Owner']['person_id']); ?>
+			<?php echo h($owner['Person']['email']); ?>
+			&nbsp;
+		</dd>
+		<dt>CUIT</dt>
+		<dd>
+			<?php echo h($owner['Person']['cuit']); ?>
 			&nbsp;
 		</dd>
 	</dl>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Owner'), array('action' => 'edit', $owner['Owner']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Owner'), array('action' => 'delete', $owner['Owner']['id']), null, __('Are you sure you want to delete # %s?', $owner['Owner']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Owners'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Owner'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Estates'), array('controller' => 'estates', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Estate'), array('controller' => 'estates', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
 <div class="related">
 	<h3><?php echo __('Related Estates'); ?></h3>
 	<?php if (!empty($owner['Estate'])): ?>
-	<table cellpadding = "0" cellspacing = "0">
+	<table cellpadding = "0" cellspacing = "0" class="table">
 	<tr>
-		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Ficha'); ?></th>
 		<th><?php echo __('Name'); ?></th>
 		<th><?php echo __('Address'); ?></th>
 		<th><?php echo __('Price'); ?></th>
 		<th><?php echo __('Contract Start'); ?></th>
 		<th><?php echo __('Contract End'); ?></th>
-		<th><?php echo __('Created'); ?></th>
-		<th><?php echo __('Modified'); ?></th>
-		<th><?php echo __('Owner Id'); ?></th>
-		<th><?php echo __('Renter Id'); ?></th>
+		<th><?php echo __('Renter'); ?></th>
 		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($owner['Estate'] as $estate): ?>
 		<tr>
-			<td><?php echo $estate['id']; ?></td>
 			<td><?php echo $estate['ficha']; ?></td>
 			<td><?php echo $estate['name']; ?></td>
 			<td><?php echo $estate['address']; ?></td>
-			<td><?php echo $estate['price']; ?></td>
-			<td><?php echo $estate['contract_start']; ?></td>
-			<td><?php echo $estate['contract_end']; ?></td>
-			<td><?php echo $estate['created']; ?></td>
-			<td><?php echo $estate['modified']; ?></td>
-			<td><?php echo $estate['owner_id']; ?></td>
-			<td><?php echo $estate['renter_id']; ?></td>
+			<td class="text-center">
+				<?php
+				echo $this->Number->currency($estate['price'], 'ARG');
+				?>&nbsp;
+			</td>
+			<td class="text-center">
+				<?php 
+				echo $this->Time->format($estate['contract_start'], '%d-%m-%Y'); 
+				?>&nbsp;
+			</td>
+			<td class="text-center">
+				<?php 
+				echo $this->Time->format($estate['contract_end'], '%d-%m-%Y'); 
+				?>&nbsp;
+			</td>
+			<td>
+				<?php echo $this->Html->link($estate['renter_name'], array('controller' => 'renters', 'action' => 'view', $estate['renter_id'])); ?>
+			</td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('View'), array('controller' => 'estates', 'action' => 'view', $estate['id'])); ?>
 				<?php echo $this->Html->link(__('Edit'), array('controller' => 'estates', 'action' => 'edit', $estate['id'])); ?>
@@ -75,9 +76,4 @@
 	</table>
 <?php endif; ?>
 
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Estate'), array('controller' => 'estates', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
 </div>
