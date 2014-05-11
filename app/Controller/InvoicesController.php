@@ -81,7 +81,7 @@ class InvoicesController extends AppController {
 		$estate = $this->Invoice->Estate->findById($id);
 		// debug($estate, $showHtml = null, $showFrom = true);
 		$this->request->data['Invoice']['address'] = $estate['Estate']['address'];
-		$this->request->data['Invoice']['subtotal'] = $estate['Estate']['price'];
+		$this->request->data['Invoice']['subtotal'] = $estate['Estate']['price'] * 1; // Cast to number
 		$this->request->data['Invoice']['iva'] = $estate['Estate']['price'] * 0.21;
 		$this->request->data['Invoice']['total'] = $estate['Estate']['price'] * 1.21;
 		$this->request->data['Invoice']['name'] = $estate['Renter']['name'];

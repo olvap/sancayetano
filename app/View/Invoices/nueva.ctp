@@ -1,5 +1,18 @@
-<div class="row">
-	<div class="col-sm-12">
+<?php 
+echo $this->Html->script(array('angular/1.2.16/angular.min'
+	, 'angular/1.2.16/angular-resource.min'
+	, 'app'
+	, 'filters'
+	, 'vendors/keypress'
+	, 'models'
+	, 'controllers/invoices'
+	)
+);
+
+?>
+
+<div class="row" data-ng-app="SancayetanoApp">
+	<div class="col-sm-12" data-ng-controller="InvoicesController" data-ng-init='invoice=<?php echo json_encode($this->request->data['Invoice'], JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP) ?>'>
 		<?php echo $this->Form->create('Invoice', array('class'=>'form-horizontal', 'role'=>'form')); ?>
 			<fieldset>
 				<legend><?php echo __('Add Invoice'); ?></legend>
@@ -27,21 +40,28 @@
 					);
 					
 					echo $this->Form->input('subtotal', array('class'=>'form-control'
+							, 'data-ng-change' => 'calcularIVA()'
+							, 'data-ng-model' => 'invoice.subtotal'
 							, 'div'=>'form-group'
-							, 'label' => array('class' => 'col-sm-2 control-label', 'text'=>'Domicilio del Inmueble')
+							, 'label' => array('class' => 'col-sm-2 control-label', 'text'=>'Subtotal')
 							, 'between' => '<div class="col-sm-8">'
 							, 'after' => '</div>')
 					);
 					echo $this->Form->input('iva', array('class'=>'form-control'
+							, 'data-ng-model' => 'invoice.iva'
+							, 'data-ng-change' => 'calcularTotal()'
 							, 'div'=>'form-group'
-							, 'label' => array('class' => 'col-sm-2 control-label', 'text'=>'Domicilio del Inmueble')
+							, 'label' => array('class' => 'col-sm-2 control-label', 'text'=>'IVA')
+							, 'model' => 'invoice.iva'
 							, 'between' => '<div class="col-sm-8">'
 							, 'after' => '</div>')
 					);
 
 					echo $this->Form->input('total', array('class'=>'form-control'
+							, 'data-ng-model' => 'invoice.total'
 							, 'div'=>'form-group'
-							, 'label' => array('class' => 'col-sm-2 control-label', 'text'=>'Domicilio del Inmueble')
+							, 'label' => array('class' => 'col-sm-2 control-label', 'text'=>'Total')
+							, 'model' => 'invoice.total'
 							, 'between' => '<div class="col-sm-8">'
 							, 'after' => '</div>')
 					);
