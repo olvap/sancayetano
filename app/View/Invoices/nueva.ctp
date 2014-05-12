@@ -12,7 +12,7 @@ echo $this->Html->script(array('angular/1.2.16/angular.min'
 ?>
 
 <div class="row" data-ng-app="SancayetanoApp">
-	<div class="col-sm-12" data-ng-controller="InvoicesController" data-ng-init='invoice=<?php echo json_encode($this->request->data['Invoice'], JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP) ?>'>
+	<div class="col-sm-12" data-ng-controller="InvoicesController" data-ng-init='invoice=<?php echo json_encode($this->request->data['Invoice']) ?>'>
 		<?php echo $this->Form->create('Invoice', array('class'=>'form-horizontal', 'role'=>'form')); ?>
 			<fieldset>
 				<legend><?php echo __('Add Invoice'); ?></legend>
