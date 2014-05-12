@@ -78,14 +78,19 @@ class InvoicesController extends AppController {
 		if(!$id) {
 			$this->redirect('/');
 		}
+		$this->Invoice->Estate->recursive = -1;
 		$estate = $this->Invoice->Estate->findById($id);
-		// debug($estate, $showHtml = null, $showFrom = true);
-		$this->request->data['Invoice']['address'] = $estate['Estate']['address'];
-		$this->request->data['Invoice']['subtotal'] = $estate['Estate']['price'] * 1; // Cast to number
-		$this->request->data['Invoice']['iva'] = $estate['Estate']['price'] * 0.21;
-		$this->request->data['Invoice']['total'] = $estate['Estate']['price'] * 1.21;
-		$this->request->data['Invoice']['name'] = $estate['Renter']['name'];
+		//debug($estate, $showHtml = null, $showFrom = true);
 		$this->request->data['Invoice']['ficha'] = $estate['Estate']['ficha'];
+		$this->request->data['Invoice']['name'] = $estate['Estate']['renter_name'];
+		$this->request->data['Invoice']['address'] = $estate['Estate']['address'];
+		$this->request->data['Invoice']['cuit'] = $estate['Estate']['renter_cuit'];
+		$this->request->data['Invoice']['type'] = $estate['Estate']['renter_ivaId'] == 1 ? 'A' : 'B';
+		$this->request->data['Invoice']['price'] = $estate['Estate']['price'] * 1; // Cast to number
+		$this->request->data['Invoice']['insurance'] = $estate['Estate']['insurance'] * 1; // Cast to number
+		$this->request->data['Invoice']['iva'] = $estate['Estate']['price'] * 0.21;
+		$this->request->data['Invoice']['subtotal'] = ($this->request->data['Invoice']['insurance'] + $this->request->data['Invoice']['price']) * 1.21;
+		
 		$this->set(compact('estates'));
 	}
 

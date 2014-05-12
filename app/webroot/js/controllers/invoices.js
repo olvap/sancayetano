@@ -8,15 +8,36 @@
   angular.module('SancayetanoApp').controller('InvoicesController', [
     '$http', '$location', '$scope', '$timeout', 'Invoice', function($http, $location, $scope, $timeout, Invoice) {
       $scope.calcularIVA = function() {
-        $scope.invoice.iva = $scope.invoice.subtotal * 0.21;
+        $scope.invoice.iva = (+$scope.invoice.price + +$scope.invoice.insurance) * 0.21;
+        return $scope.calcularSubtotal();
+      };
+      $scope.calcularSubtotal = function() {
+        $scope.invoice.subtotal = +$scope.invoice.price;
+        $scope.invoice.subtotal += +$scope.invoice.insurance;
+        $scope.invoice.subtotal += +$scope.invoice.iva;
         return $scope.calcularTotal();
       };
-      return $scope.calcularTotal = function() {
-        var iva, subtotal;
-        subtotal = $scope.invoice.subtotal;
-        iva = $scope.invoice.subtotal * 0.21;
-        return $scope.invoice.total = subtotal + iva;
+      $scope.calcularTotal = function() {
+        var _ref;
+        if ($scope.invoice != null) {
+          $scope.invoice.total = (_ref = +$scope.invoice.subtotal) != null ? _ref : 0;
+          if (+($scope.invoice.tgi != null)) {
+            $scope.invoice.total += +$scope.invoice.tgi;
+          }
+          if (+($scope.invoice.api != null)) {
+            $scope.invoice.total += +$scope.invoice.api;
+          }
+          if (+($scope.invoice.agua != null)) {
+            $scope.invoice.total += +$scope.invoice.agua;
+          }
+          if (+($scope.invoice.stamped != null)) {
+            return $scope.invoice.total += +$scope.invoice.stamped;
+          }
+        }
       };
+      return $timeout(function() {
+        return $scope.calcularTotal();
+      }, 50);
     }
   ]);
 

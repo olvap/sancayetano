@@ -14,6 +14,20 @@ class Estate extends AppModel {
 			FROM renters R, people P 
 			WHERE Estate.renter_id = R.id
 			AND R.person_id = P.id'
+		, 'renter_cuit' => 'SELECT P.cuit
+			FROM renters R, people P
+			WHERE Estate.renter_id = R.id
+			AND R.person_id = P.id'
+		, 'renter_iva' => 'SELECT I.name 
+			FROM renters R, people P, ivas I
+			WHERE Estate.renter_id = R.id
+			AND R.person_id = P.id
+			AND P.iva_id = I.id'
+		, 'renter_ivaId' => 'SELECT I.id 
+			FROM renters R, people P, ivas I
+			WHERE Estate.renter_id = R.id
+			AND R.person_id = P.id
+			AND P.iva_id = I.id'
 		, 'owner_name' => 'SELECT P.name 
 			FROM owners O, people P 
 			WHERE Estate.owner_id = O.id
