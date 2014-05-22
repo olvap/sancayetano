@@ -7,11 +7,12 @@ angular.module('SancayetanoApp').controller 'InvoicesController'
 
 
 	$scope.calcularIVA = ->
-		$scope.invoice.iva = (+$scope.invoice.price + +$scope.invoice.insurance) * 0.21
+		$scope.invoice.iva = (+$scope.invoice.price + +$scope.invoice.gastos_administrativos) * 0.21
 		$scope.calcularSubtotal()
 
 	$scope.calcularSubtotal = ->
 		$scope.invoice.subtotal = +$scope.invoice.price
+		if +$scope.invoice.gastos_administrativos? then $scope.invoice.subtotal += +$scope.invoice.gastos_administrativos
 		$scope.invoice.subtotal += +$scope.invoice.insurance
 		$scope.invoice.subtotal += +$scope.invoice.iva
 
@@ -29,4 +30,5 @@ angular.module('SancayetanoApp').controller 'InvoicesController'
 	$timeout ->
 		$scope.calcularTotal()
 	, 50
+
 ]

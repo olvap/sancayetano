@@ -8,11 +8,14 @@
   angular.module('SancayetanoApp').controller('InvoicesController', [
     '$http', '$location', '$scope', '$timeout', 'Invoice', function($http, $location, $scope, $timeout, Invoice) {
       $scope.calcularIVA = function() {
-        $scope.invoice.iva = (+$scope.invoice.price + +$scope.invoice.insurance) * 0.21;
+        $scope.invoice.iva = (+$scope.invoice.price + +$scope.invoice.gastos_administrativos) * 0.21;
         return $scope.calcularSubtotal();
       };
       $scope.calcularSubtotal = function() {
         $scope.invoice.subtotal = +$scope.invoice.price;
+        if (+($scope.invoice.gastos_administrativos != null)) {
+          $scope.invoice.subtotal += +$scope.invoice.gastos_administrativos;
+        }
         $scope.invoice.subtotal += +$scope.invoice.insurance;
         $scope.invoice.subtotal += +$scope.invoice.iva;
         return $scope.calcularTotal();

@@ -80,7 +80,8 @@ class InvoicesController extends AppController {
 		}
 		$this->Invoice->Estate->recursive = -1;
 		$estate = $this->Invoice->Estate->findById($id);
-		//debug($estate, $showHtml = null, $showFrom = true);
+		// debug($estate, $showHtml = null, $showFrom = true);
+		$this->request->data['Estate'] = $estate['Estate'];
 		$this->request->data['Invoice']['ficha'] = $estate['Estate']['ficha'];
 		$this->request->data['Invoice']['name'] = $estate['Estate']['renter_name'];
 		$this->request->data['Invoice']['address'] = $estate['Estate']['address'];
