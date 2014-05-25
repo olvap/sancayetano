@@ -37,9 +37,19 @@
 						, array('class'=>'form-control'
 							, 'div'=>'form-group'
 							, 'label' => array('class' => 'col-sm-2 control-label')
-							, 'between' => '<div class="col-sm-8">'
-							, 'after' => '</div>')
+							, 'between' => '<div class="col-sm-8"><div class="input-group"><span class="input-group-addon">$</span>'
+							, 'after' => '</div></div>')
 					);
+
+					# Seguro
+					echo $this->Form->input('insurance'
+						, array('class'=>'form-control'
+							, 'div'=>'form-group'
+							, 'label' => array('class' => 'col-sm-2 control-label')
+							, 'between' => '<div class="col-sm-8"><div class="input-group"><span class="input-group-addon">$</span>'
+							, 'after' => '</div></div>')
+					);
+					
 					echo $this->Form->input('contract_start'
 						, array('class'=>'form-control date'
 							, 'dateFormat' => 'DMY'

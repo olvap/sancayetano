@@ -38,37 +38,49 @@ echo $this->Html->script(array('angular/1.2.16/angular.min'
 							, 'after' => '</div>'
 						)
 					);
+
+					# Número de Ficha
 					echo $this->Form->input('ficha'
 						, array('class'=>'form-control'
 							, 'div'=>'form-group'
 							, 'label' => array('class' => 'col-sm-2 control-label', 'text'=>'Número de Ficha')
 							, 'between' => '<div class="col-sm-8">'
-							, 'after' => '</div>')
+							, 'after' => '</div>'
+						)
 					);
+
+					# Nombre del Inquilino
 					echo $this->Form->input('name'
 						, array('class'=>'form-control'
 							, 'div'=>'form-group'
 							, 'label' => array('class' => 'col-sm-2 control-label', 'text'=>'Nombre del Inquilino')
 							, 'between' => '<div class="col-sm-8">'
-							, 'after' => '</div>')
+							, 'after' => '</div>'
+						)
 					);
+
+					# Condición de IVA: RI, Monotributo, Exento
 					echo $this->Form->input('Estate.renter_iva'
 						, array('class'=>'form-control'
 							, 'disabled'=> true
 							, 'div'=>'form-group'
 							, 'label' => array('class' => 'col-sm-2 control-label', 'text'=>'Condición IVA')
 							, 'between' => '<div class="col-sm-8">'
-							, 'after' => '</div>')
+							, 'after' => '</div>'
+						)
 					);
+
+					# CUIT del Inquilino
 					echo $this->Form->input('cuit'
 						, array('class'=>'form-control'
 							, 'div'=>'form-group'
 							, 'label' => array('class' => 'col-sm-2 control-label', 'text'=>'CUIT del Inquilino')
 							, 'between' => '<div class="col-sm-8">'
-							, 'after' => '</div>')
+							, 'after' => '</div>'
+						)
 					);
 
-					// echo $this->Form->label('address', 'Domicilio del Inmueble', array('class' => 'col-sm-2 control-label'));
+					# Domicilio del Inmueble
 					echo $this->Form->input('address'
 						, array('class'=>'form-control'
 							, 'div'=>'form-group'
@@ -76,7 +88,7 @@ echo $this->Html->script(array('angular/1.2.16/angular.min'
 							// , 'label' => false
 							, 'between' => '<div class="col-sm-8">'
 							, 'after' => '</div>'
-							)
+						)
 					);
 					
 					# Precio Cuota
@@ -89,9 +101,10 @@ echo $this->Html->script(array('angular/1.2.16/angular.min'
 								, 'div'=>'col-sm-4'
 								// , 'label' => array('class' => 'col-sm-4 control-label', 'text'=>'Total Alquiler')
 								, 'label' => false
+								, 'before' => '<div class="input-group"><span class="input-group-addon">$</span>'
 								// , 'between' => '<div class="col-sm-8">'
-								// , 'after' => '</div>'
-								)
+								, 'after' => '</div>'
+							)
 						);
 
 						# Observaciones Precio Cuota de Alquiler
@@ -105,7 +118,7 @@ echo $this->Html->script(array('angular/1.2.16/angular.min'
 								, 'placeholder' => 'Observaciones Alquiler'
 								// , 'between' => '<div class="col-sm-8">'
 								// , 'after' => '</div>'
-								)
+							)
 						);
 					echo "</div>";
 
@@ -115,8 +128,9 @@ echo $this->Html->script(array('angular/1.2.16/angular.min'
 							, 'data-ng-model' => 'invoice.gastos_administrativos'
 							, 'div'=>'form-group'
 							, 'label' => array('class' => 'col-sm-2 control-label', 'text'=>'Gastos Administrativos')
-							, 'between' => '<div class="col-sm-8">'
-							, 'after' => '</div>')
+							, 'between' => '<div class="col-sm-8"><div class="input-group"><span class="input-group-addon">$</span>'
+							, 'after' => '</div></div>'
+						)
 					);
 
 					# IVA
@@ -126,24 +140,30 @@ echo $this->Html->script(array('angular/1.2.16/angular.min'
 							, 'disabled'=> true
 							, 'div'=>'form-group'
 							, 'label' => array('class' => 'col-sm-2 control-label', 'text'=>'IVA')
-							, 'between' => '<div class="col-sm-8">'
-							, 'after' => '</div>')
+							, 'between' => '<div class="col-sm-8"><div class="input-group"><span class="input-group-addon">$</span>'
+							, 'after' => '</div></div>'
+						)
 					);
+
+					# Seguro
 					echo $this->Form->input('insurance', array('class'=>'form-control'
 							, 'data-ng-change' => 'calcularSubtotal()'
 							, 'data-ng-model' => 'invoice.insurance'
 							, 'div'=>'form-group'
 							, 'label' => array('class' => 'col-sm-2 control-label', 'text'=>'Total Seguro')
-							, 'between' => '<div class="col-sm-8">'
-							, 'after' => '</div>')
+							, 'between' => '<div class="col-sm-8"><div class="input-group"><span class="input-group-addon">$</span>'
+							, 'after' => '</div></div>'
+						)
 					);
 
+					# Subtotal
 					echo $this->Form->input('subtotal', array('class'=>'form-control'
 							, 'data-ng-model' => 'invoice.subtotal'
 							, 'div'=>'form-group'
 							, 'label' => array('class' => 'col-sm-2 control-label', 'text'=>'Total Alq. y Seguro')
-							, 'between' => '<div class="col-sm-8">'
-							, 'after' => '</div>')
+							, 'between' => '<div class="col-sm-8"><div class="input-group"><span class="input-group-addon">$</span>'
+							, 'after' => '</div></div>'
+						)
 					);
 					
 					# API
@@ -163,7 +183,9 @@ echo $this->Html->script(array('angular/1.2.16/angular.min'
 								, 'data-ng-model' => 'invoice.api'
 								, 'div'=>'col-sm-4'
 								, 'label' => false
-								)
+								, 'before' => '<div class="input-group"><span class="input-group-addon">$</span>'
+								, 'after' => '</div>'
+							)
 						);
 
 						# Observaciones Precio Cuota de Alquiler
@@ -172,7 +194,7 @@ echo $this->Html->script(array('angular/1.2.16/angular.min'
 								, 'div'=>'col-sm-4'
 								, 'label' => false
 								, 'placeholder' => 'Observaciones Imp. Provincial'
-								)
+							)
 						);
 					echo "</div>";
 					
@@ -192,7 +214,9 @@ echo $this->Html->script(array('angular/1.2.16/angular.min'
 								, 'data-ng-model' => 'invoice.tgi'
 								, 'div'=>'col-sm-4'
 								, 'label' => false
-								)
+								, 'before' => '<div class="input-group"><span class="input-group-addon">$</span>'
+								, 'after' => '</div>'
+							)
 						);
 
 						# Observaciones Imp. Municipal
@@ -201,7 +225,7 @@ echo $this->Html->script(array('angular/1.2.16/angular.min'
 								, 'div'=>'col-sm-4'
 								, 'label' => false
 								, 'placeholder' => 'Observaciones Imp. Municipal'
-								)
+							)
 						);
 					echo "</div>";
 
@@ -221,7 +245,9 @@ echo $this->Html->script(array('angular/1.2.16/angular.min'
 								, 'data-ng-model' => 'invoice.agua'
 								, 'div'=>'col-sm-4'
 								, 'label' => false
-								)
+								, 'before' => '<div class="input-group"><span class="input-group-addon">$</span>'
+								, 'after' => '</div>'
+							)
 						);
 
 						# Observaciones Imp. Aguas Pciales.
@@ -230,7 +256,7 @@ echo $this->Html->script(array('angular/1.2.16/angular.min'
 								, 'div'=>'col-sm-4'
 								, 'label' => false
 								, 'placeholder' => 'Observaciones Imp. Aguas Pciales.'
-								)
+							)
 						);
 					echo "</div>";
 
@@ -240,8 +266,9 @@ echo $this->Html->script(array('angular/1.2.16/angular.min'
 							, 'data-ng-model' => 'invoice.stamped'
 							, 'div'=>'form-group'
 							, 'label' => array('class' => 'col-sm-2 control-label', 'text'=>'Sellado')
-							, 'between' => '<div class="col-sm-8">'
-							, 'after' => '</div>')
+							, 'between' => '<div class="col-sm-8"><div class="input-group"><span class="input-group-addon">$</span>'
+							, 'after' => '</div></div>'
+						)
 					);
 
 					# Total General
@@ -249,8 +276,9 @@ echo $this->Html->script(array('angular/1.2.16/angular.min'
 							, 'data-ng-model' => 'invoice.total'
 							, 'div'=>'form-group'
 							, 'label' => array('class' => 'col-sm-2 control-label', 'text'=>'Total General')
-							, 'between' => '<div class="col-sm-8">'
-							, 'after' => '</div>')
+							, 'between' => '<div class="col-sm-8"><div class="input-group"><span class="input-group-addon">$</span>'
+							, 'after' => '</div></div>'
+						)
 					);
 
 				?>

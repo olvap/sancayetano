@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: San Cayetano\n"
-"POT-Creation-Date: 2014-05-08 09:31-0300\n"
-"PO-Revision-Date: 2014-05-08 10:05-0300\n"
+"POT-Creation-Date: 2014-05-25 20:44-0300\n"
+"PO-Revision-Date: 2014-05-25 20:47-0300\n"
 "Last-Translator: Ale Prieto <aleprieto@gmail.com>\n"
 "Language-Team: Colectivo Libre <contacto@colectivolibre.com.ar>\n"
 "Language: \n"
@@ -18,43 +18,63 @@ msgstr ""
 "X-Poedit-Country: ARGENTINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: Controller/EstatesController.php:37;80;108;138;173;201
+#: Controller/CompaniesController.php:37;69;94
+msgid "Invalid company"
+msgstr "Empresa inválida"
+
+#: Controller/CompaniesController.php:52;73
+msgid "The company has been saved."
+msgstr "La empresa ha sido guardada."
+
+#: Controller/CompaniesController.php:55;76
+msgid "The company could not be saved. Please, try again."
+msgstr "La empresa no ha sido guardada. Por favor, intente nuevamente."
+
+#: Controller/CompaniesController.php:98
+msgid "The company has been deleted."
+msgstr "La empresa ha sido eliminada."
+
+#: Controller/CompaniesController.php:100
+msgid "The company could not be deleted. Please, try again."
+msgstr "La empresa no ha sido eliminada. Por favor, intente nuevamente."
+
+#: Controller/EstatesController.php:36;84;125;155;190;218
 msgid "Invalid estate"
 msgstr "Inmueble inválido"
 
-#: Controller/EstatesController.php:52;84;153;177
+#: Controller/EstatesController.php:51;88;170;194
 msgid "The estate has been saved."
 msgstr "El inmueble ha sido guardado."
 
-#: Controller/EstatesController.php:55;87;156;180
+#: Controller/EstatesController.php:54;91;173;197
 msgid "The estate could not be saved. Please, try again."
 msgstr "El inmueble no ha sido guardado. Por favor, intente nuevamente."
 
-#: Controller/EstatesController.php:112;205
+#: Controller/EstatesController.php:129;222
 msgid "The estate has been deleted."
 msgstr "El inmueble ha sido eliminado."
 
-#: Controller/EstatesController.php:114;207
+#: Controller/EstatesController.php:131;224
 msgid "The estate could not be deleted. Please, try again."
 msgstr "El inmueble no ha sido eliminado. Por favor, intente nuevamente"
 
-#: Controller/InvoicesController.php:37;101;128;158;192;219
+#: Controller/InvoicesController.php:37;112;139;169;203;230
 msgid "Invalid invoice"
 msgstr "Factura inválida"
 
-#: Controller/InvoicesController.php:52;105;173;196
+#: Controller/InvoicesController.php:52;116;184;207
 msgid "The invoice has been saved."
 msgstr "La factura ha sido guardada."
 
-#: Controller/InvoicesController.php:55;75;108;176;199
+#: Controller/InvoicesController.php:55;75;119;187;210
 msgid "The invoice could not be saved. Please, try again."
 msgstr "La factura no ha sido guardada. Por favor, intente nuevamente."
 
-#: Controller/InvoicesController.php:132;223
+#: Controller/InvoicesController.php:143;234
 msgid "The invoice has been deleted."
 msgstr "La factura ha sido eliminada."
 
-#: Controller/InvoicesController.php:134;225
+#: Controller/InvoicesController.php:145;236
 msgid "The invoice could not be deleted. Please, try again."
 msgstr "La factura no ha sido eliminada. Por favor, intente nuevamente."
 
@@ -138,11 +158,310 @@ msgstr "El inquilino ha sido eliminado."
 msgid "The renter could not be deleted. Please, try again."
 msgstr "El propietario no ha sido eliminado. Por favor, intente nuevamente."
 
+#: View/Companies/add.ctp:4
+msgid "Add Company"
+msgstr "Nueva Empresa"
+
+#: View/Companies/add.ctp:10
+#: View/Companies/edit.ctp:11
+#: View/Estates/add.ctp:88;117
+#: View/Estates/edit.ctp:96
+#: View/Invoices/add.ctp:18
+#: View/Invoices/edit.ctp:51
+#: View/Invoices/nueva.ctp:287
+#: View/Items/add.ctp:12
+#: View/Items/edit.ctp:13
+#: View/Ivas/add.ctp:9
+#: View/Ivas/edit.ctp:10
+#: View/Owners/add.ctp:54
+#: View/Owners/edit.ctp:57
+#: View/People/add.ctp:14
+#: View/People/edit.ctp:15
+#: View/Renters/add.ctp:54
+#: View/Renters/edit.ctp:57
+msgid "Submit"
+msgstr "Enviar"
+
+#: View/Companies/add.ctp:13
+#: View/Companies/edit.ctp:14
+#: View/Companies/index.ctp:10;42
+#: View/Companies/view.ctp:32;60
+#: View/Estates/index.ctp:13
+#: View/Invoices/add.ctp:22
+#: View/Invoices/index.ctp:12
+#: View/Invoices/view.ctp:72;96
+#: View/Items/add.ctp:16
+#: View/Items/edit.ctp:17
+#: View/Items/index.ctp:12;49
+#: View/Items/view.ctp:43
+#: View/Ivas/add.ctp:12
+#: View/Ivas/edit.ctp:13
+#: View/Ivas/index.ctp:9;40
+#: View/Ivas/view.ctp:27;55
+#: View/Owners/index.ctp:11
+#: View/Owners/view.ctp:44
+#: View/People/edit.ctp:18
+#: View/People/index.ctp:14;52
+#: View/People/view.ctp:72;93
+#: View/Renters/index.ctp:11
+#: View/Renters/view.ctp:44
+msgid "Actions"
+msgstr "Acciones"
+
+#: View/Companies/add.ctp:16
+#: View/Companies/edit.ctp:18
+#: View/Companies/view.ctp:36
+msgid "List Companies"
+msgstr "Listar Empresas"
+
+#: View/Companies/add.ctp:17
+#: View/Companies/edit.ctp:19
+#: View/Companies/index.ctp:45
+#: View/Companies/view.ctp:38
+#: View/Elements/menu.ctp:13
+#: View/Invoices/add.ctp:26
+#: View/Invoices/view.ctp:78
+#: View/Layouts/default.ctp:62
+msgid "List Estates"
+msgstr "Listar Inmuebles"
+
+#: View/Companies/add.ctp:18
+#: View/Companies/edit.ctp:20
+#: View/Companies/index.ctp:46
+#: View/Companies/view.ctp:39;89
+#: View/Elements/menu.ctp:14
+#: View/Layouts/default.ctp:61
+msgid "New Estate"
+msgstr "Nuevo Inmueble"
+
+#: View/Companies/edit.ctp:4
+#: View/Companies/view.ctp:34
+msgid "Edit Company"
+msgstr "Editar Empresa"
+
+#: View/Companies/edit.ctp:17
+#: View/Companies/index.ctp:22
+#: View/Companies/view.ctp:80
+#: View/Estates/index.ctp:45
+#: View/Invoices/index.ctp:45
+#: View/Invoices/view.ctp:110
+#: View/Items/edit.ctp:20
+#: View/Items/index.ctp:28
+#: View/Ivas/edit.ctp:16
+#: View/Ivas/index.ctp:20
+#: View/Ivas/view.ctp:75
+#: View/Owners/index.ctp:23
+#: View/Owners/view.ctp:72
+#: View/People/edit.ctp:21
+#: View/People/index.ctp:32
+#: View/People/view.ctp:104
+#: View/Renters/index.ctp:23
+#: View/Renters/view.ctp:60
+msgid "Delete"
+msgstr "Eliminar"
+
+#: View/Companies/edit.ctp:17
+#: View/Companies/index.ctp:22
+#: View/Companies/view.ctp:35;80
+#: View/Estates/index.ctp:45
+#: View/Invoices/index.ctp:45
+#: View/Invoices/view.ctp:75;110
+#: View/Items/edit.ctp:20
+#: View/Items/index.ctp:28
+#: View/Items/view.ctp:46
+#: View/Ivas/edit.ctp:16
+#: View/Ivas/index.ctp:20
+#: View/Ivas/view.ctp:30;75
+#: View/Owners/index.ctp:23
+#: View/Owners/view.ctp:72
+#: View/People/edit.ctp:21
+#: View/People/index.ctp:32
+#: View/People/view.ctp:75;104
+#: View/Renters/index.ctp:23
+#: View/Renters/view.ctp:60
+msgid "Are you sure you want to delete # %s?"
+msgstr "¿Está seguro que quiere eliminarlo?"
+
+#: View/Companies/index.ctp:2
+msgid "Companies"
+msgstr "Empresas"
+
+#: View/Companies/index.ctp:20
+#: View/Companies/view.ctp:78
+#: View/Estates/index.ctp:43
+#: View/Invoices/index.ctp:43
+#: View/Invoices/view.ctp:108
+#: View/Items/index.ctp:26
+#: View/Ivas/index.ctp:18
+#: View/Ivas/view.ctp:73
+#: View/Owners/index.ctp:21
+#: View/Owners/view.ctp:70
+#: View/People/index.ctp:30
+#: View/People/view.ctp:102
+#: View/Renters/index.ctp:21
+#: View/Renters/view.ctp:58
+msgid "View"
+msgstr "Ver"
+
+#: View/Companies/index.ctp:21
+#: View/Companies/view.ctp:79
+#: View/Estates/index.ctp:44
+#: View/Invoices/index.ctp:44
+#: View/Invoices/view.ctp:109
+#: View/Items/index.ctp:27
+#: View/Ivas/index.ctp:19
+#: View/Ivas/view.ctp:74
+#: View/Owners/index.ctp:22
+#: View/Owners/view.ctp:71
+#: View/People/index.ctp:31
+#: View/People/view.ctp:103
+#: View/Renters/index.ctp:22
+#: View/Renters/view.ctp:59
+msgid "Edit"
+msgstr "Editar"
+
+#: View/Companies/index.ctp:30
+#: View/Elements/paginator.ctp:4
+#: View/Items/index.ctp:36
+#: View/Ivas/index.ctp:28
+#: View/People/index.ctp:40
+msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
+msgstr "Página {:page} de {:pages}, mostrando {:current} registros de un total de {:count}, empezando en {:start} y terminando en {:end}"
+
+#: View/Companies/index.ctp:35
+#: View/Elements/paginator.ctp:10
+#: View/Items/index.ctp:41
+#: View/Ivas/index.ctp:33
+#: View/People/index.ctp:45
+msgid "previous"
+msgstr "anterior"
+
+#: View/Companies/index.ctp:37
+#: View/Elements/paginator.ctp:12
+#: View/Items/index.ctp:43
+#: View/Ivas/index.ctp:35
+#: View/People/index.ctp:47
+msgid "next"
+msgstr "próximo"
+
+#: View/Companies/index.ctp:44
+#: View/Companies/view.ctp:37
+msgid "New Company"
+msgstr "Nueva Empresa"
+
+#: View/Companies/view.ctp:2
+msgid "Company"
+msgstr "Empresa"
+
+#: View/Companies/view.ctp:4;47
+#: View/Invoices/view.ctp:4;89
+#: View/Items/view.ctp:4
+#: View/Ivas/view.ctp:4;42
+#: View/People/view.ctp:4;89
+msgid "Id"
+msgstr "ID"
+
+#: View/Companies/view.ctp:9;49
+#: View/Estates/view.ctp:9
+#: View/Invoices/view.ctp:9
+#: View/Ivas/view.ctp:9;43
+#: View/Owners/view.ctp:38
+#: View/People/view.ctp:9
+#: View/Renters/view.ctp:38
+msgid "Name"
+msgstr "Nombre"
+
+#: View/Companies/view.ctp:14
+#: View/Ivas/view.ctp:47
+#: View/People/view.ctp:29
+msgid "Cuit"
+msgstr "CUIT"
+
+#: View/Companies/view.ctp:19;55
+#: View/Invoices/view.ctp:54;93
+#: View/Items/view.ctp:24
+#: View/Ivas/view.ctp:14;52
+#: View/People/view.ctp:54;90
+msgid "Created"
+msgstr "Creado"
+
+#: View/Companies/view.ctp:24;56
+#: View/Invoices/view.ctp:59;94
+#: View/Items/view.ctp:29
+#: View/Ivas/view.ctp:19;53
+#: View/People/view.ctp:59;91
+msgid "Modified"
+msgstr "Modificado"
+
+#: View/Companies/view.ctp:35
+msgid "Delete Company"
+msgstr "Eliminar Empresa"
+
+#: View/Companies/view.ctp:43
+#: View/Owners/view.ctp:33
+#: View/Renters/view.ctp:33
+msgid "Related Estates"
+msgstr "Inmuebles relacionados"
+
+#: View/Companies/view.ctp:48
+#: View/Owners/view.ctp:37
+#: View/Renters/view.ctp:37
+msgid "Ficha"
+msgstr "Número Ficha"
+
+#: View/Companies/view.ctp:50
+#: View/Estates/view.ctp:14
+#: View/Invoices/view.ctp:14
+#: View/Ivas/view.ctp:44
+#: View/Owners/view.ctp:39
+#: View/People/view.ctp:14
+#: View/Renters/view.ctp:39
+msgid "Address"
+msgstr "Domicilio"
+
+#: View/Companies/view.ctp:51
+#: View/Estates/view.ctp:19
+#: View/Invoices/view.ctp:92
+#: View/Items/view.ctp:19
+#: View/Owners/view.ctp:40
+#: View/Renters/view.ctp:40
+msgid "Price"
+msgstr "Precio"
+
+#: View/Companies/view.ctp:52
+msgid "Insurance"
+msgstr "Seguro"
+
+#: View/Companies/view.ctp:53
+#: View/Estates/view.ctp:24
+#: View/Invoices/view.ctp:39
+#: View/Owners/view.ctp:41
+#: View/Renters/view.ctp:41
+msgid "Contract Start"
+msgstr "Comienzo de Contrato"
+
+#: View/Companies/view.ctp:54
+#: View/Estates/view.ctp:29
+#: View/Invoices/view.ctp:44
+#: View/Owners/view.ctp:42
+#: View/Renters/view.ctp:42
+msgid "Contract End"
+msgstr "Fin de Contrato"
+
+#: View/Companies/view.ctp:57
+msgid "Company Id"
+msgstr "Empresa Id"
+
+#: View/Companies/view.ctp:58
+msgid "Owner Id"
+msgstr "ID Propietario"
+
+#: View/Companies/view.ctp:59
+msgid "Renter Id"
+msgstr "ID Inquilino"
+
 #: View/Elements/menu.ctp:5
-#: View/Estates/edit.ctp:26
-#: View/Estates/view.ctp:69
 #: View/Layouts/default.ctp:48
-#: View/Owners/view.ctp:31
 #: View/People/edit.ctp:25
 #: View/People/index.ctp:57
 #: View/People/view.ctp:80
@@ -150,10 +469,7 @@ msgid "List Owners"
 msgstr "Listar Propietarios"
 
 #: View/Elements/menu.ctp:6
-#: View/Estates/edit.ctp:27
-#: View/Estates/view.ctp:70
 #: View/Layouts/default.ctp:47
-#: View/Owners/view.ctp:32
 #: View/People/edit.ctp:26
 #: View/People/index.ctp:58
 #: View/People/view.ctp:81;113
@@ -161,46 +477,17 @@ msgid "New Owner"
 msgstr "Nuevo Propietario"
 
 #: View/Elements/menu.ctp:9
-#: View/Estates/edit.ctp:28
-#: View/Estates/view.ctp:71
 #: View/Layouts/default.ctp:55
-#: View/Renters/view.ctp:31
 msgid "List Renters"
 msgstr "Listar Inquilinos"
 
 #: View/Elements/menu.ctp:10
-#: View/Estates/edit.ctp:29
-#: View/Estates/view.ctp:72
 #: View/Layouts/default.ctp:54
-#: View/Renters/view.ctp:32
 msgid "New Renter"
 msgstr "Nuevo Inquilino"
 
-#: View/Elements/menu.ctp:13
-#: View/Estates/edit.ctp:25
-#: View/Estates/view.ctp:67
-#: View/Invoices/add.ctp:26
-#: View/Invoices/edit.ctp:28
-#: View/Invoices/nueva.ctp:25
-#: View/Invoices/view.ctp:78
-#: View/Layouts/default.ctp:62
-#: View/Owners/view.ctp:33
-#: View/Renters/view.ctp:33
-msgid "List Estates"
-msgstr "Listar Inmuebles"
-
-#: View/Elements/menu.ctp:14
-#: View/Estates/view.ctp:68
-#: View/Layouts/default.ctp:61
-#: View/Owners/view.ctp:34;80
-#: View/Renters/view.ctp:34;80
-msgid "New Estate"
-msgstr "Nuevo Inmueble"
-
 #: View/Elements/menu.ctp:18
 #: View/Invoices/add.ctp:25
-#: View/Invoices/edit.ctp:27
-#: View/Invoices/nueva.ctp:24
 #: View/Invoices/view.ctp:76
 #: View/Items/add.ctp:20
 #: View/Items/edit.ctp:22
@@ -219,265 +506,51 @@ msgstr "Listar Facturas"
 msgid "New Invoice"
 msgstr "Nueva Factura"
 
-#: View/Elements/paginator.ctp:4
-#: View/Items/index.ctp:36
-#: View/Ivas/index.ctp:28
-#: View/People/index.ctp:40
-msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
-msgstr "Página {:page} de {:pages}, mostrando {:current} registros de un total de {:count}, empezando en {:start} y terminando en {:end}"
-
-#: View/Elements/paginator.ctp:10
-#: View/Items/index.ctp:41
-#: View/Ivas/index.ctp:33
-#: View/People/index.ctp:45
-msgid "previous"
-msgstr "anterior"
-
-#: View/Elements/paginator.ctp:12
-#: View/Items/index.ctp:43
-#: View/Ivas/index.ctp:35
-#: View/People/index.ctp:47
-msgid "next"
-msgstr "próximo"
-
-#: View/Estates/add.ctp:5;87
+#: View/Estates/add.ctp:5;105
 msgid "Add Estate"
 msgstr "Crear Inmueble"
 
-#: View/Estates/add.ctp:70;99
-#: View/Estates/edit.ctp:17
-#: View/Invoices/add.ctp:18
-#: View/Invoices/edit.ctp:19
-#: View/Invoices/nueva.ctp:17
-#: View/Items/add.ctp:12
-#: View/Items/edit.ctp:13
-#: View/Ivas/add.ctp:9
-#: View/Ivas/edit.ctp:10
-#: View/Owners/add.ctp:54
-#: View/Owners/edit.ctp:57
-#: View/People/add.ctp:14
-#: View/People/edit.ctp:15
-#: View/Renters/add.ctp:54
-#: View/Renters/edit.ctp:57
-msgid "Submit"
-msgstr "Enviar"
-
-#: View/Estates/edit.ctp:4
-#: View/Estates/view.ctp:65
+#: View/Estates/edit.ctp:5
 msgid "Edit Estate"
 msgstr "Editar Inmueble"
-
-#: View/Estates/edit.ctp:21
-#: View/Estates/index.ctp:13
-#: View/Estates/view.ctp:63
-#: View/Invoices/add.ctp:22
-#: View/Invoices/edit.ctp:23
-#: View/Invoices/index.ctp:13
-#: View/Invoices/nueva.ctp:21
-#: View/Invoices/view.ctp:72;96
-#: View/Items/add.ctp:16
-#: View/Items/edit.ctp:17
-#: View/Items/index.ctp:12;49
-#: View/Items/view.ctp:43
-#: View/Ivas/add.ctp:12
-#: View/Ivas/edit.ctp:13
-#: View/Ivas/index.ctp:9;40
-#: View/Ivas/view.ctp:27;55
-#: View/Owners/index.ctp:11
-#: View/Owners/view.ctp:27;53
-#: View/People/edit.ctp:18
-#: View/People/index.ctp:14;52
-#: View/People/view.ctp:72;93
-#: View/Renters/index.ctp:11
-#: View/Renters/view.ctp:27;53
-msgid "Actions"
-msgstr "Acciones"
-
-#: View/Estates/edit.ctp:24
-#: View/Estates/index.ctp:33
-#: View/Invoices/edit.ctp:26
-#: View/Invoices/index.ctp:31
-#: View/Invoices/view.ctp:110
-#: View/Items/edit.ctp:20
-#: View/Items/index.ctp:28
-#: View/Ivas/edit.ctp:16
-#: View/Ivas/index.ctp:20
-#: View/Ivas/view.ctp:75
-#: View/Owners/index.ctp:23
-#: View/Owners/view.ctp:71
-#: View/People/edit.ctp:21
-#: View/People/index.ctp:32
-#: View/People/view.ctp:104
-#: View/Renters/index.ctp:23
-#: View/Renters/view.ctp:71
-msgid "Delete"
-msgstr "Eliminar"
-
-#: View/Estates/edit.ctp:24
-#: View/Estates/index.ctp:33
-#: View/Estates/view.ctp:66
-#: View/Invoices/edit.ctp:26
-#: View/Invoices/index.ctp:31
-#: View/Invoices/view.ctp:75;110
-#: View/Items/edit.ctp:20
-#: View/Items/index.ctp:28
-#: View/Items/view.ctp:46
-#: View/Ivas/edit.ctp:16
-#: View/Ivas/index.ctp:20
-#: View/Ivas/view.ctp:30;75
-#: View/Owners/index.ctp:23
-#: View/Owners/view.ctp:30;71
-#: View/People/edit.ctp:21
-#: View/People/index.ctp:32
-#: View/People/view.ctp:75;104
-#: View/Renters/index.ctp:23
-#: View/Renters/view.ctp:30;71
-msgid "Are you sure you want to delete # %s?"
-msgstr "¿Está seguro que quiere eliminarlo?"
 
 #: View/Estates/index.ctp:2
 #: View/Invoices/view.ctp:64
 msgid "Estates"
 msgstr "Inmuebles"
 
-#: View/Estates/index.ctp:31
-#: View/Invoices/index.ctp:29
-#: View/Invoices/view.ctp:108
-#: View/Items/index.ctp:26
-#: View/Ivas/index.ctp:18
-#: View/Ivas/view.ctp:73
-#: View/Owners/index.ctp:21
-#: View/Owners/view.ctp:69
-#: View/People/index.ctp:30
-#: View/People/view.ctp:102
-#: View/Renters/index.ctp:21
-#: View/Renters/view.ctp:69
-msgid "View"
-msgstr "Ver"
-
-#: View/Estates/index.ctp:32
-#: View/Invoices/index.ctp:30
-#: View/Invoices/view.ctp:109
-#: View/Items/index.ctp:27
-#: View/Ivas/index.ctp:19
-#: View/Ivas/view.ctp:74
-#: View/Owners/index.ctp:22
-#: View/Owners/view.ctp:70
-#: View/People/index.ctp:31
-#: View/People/view.ctp:103
-#: View/Renters/index.ctp:22
-#: View/Renters/view.ctp:70
-msgid "Edit"
-msgstr "Editar"
-
 #: View/Estates/view.ctp:2
 msgid "Estate"
 msgstr "Inmueble"
 
 #: View/Estates/view.ctp:4
-#: View/Invoices/view.ctp:4;89
-#: View/Items/view.ctp:4
-#: View/Ivas/view.ctp:4;42
-#: View/Owners/view.ctp:4;42
-#: View/People/view.ctp:4;89
-#: View/Renters/view.ctp:4;42
-msgid "Id"
-msgstr "ID"
-
-#: View/Estates/view.ctp:9
 msgid "ficha"
 msgstr "Número Ficha"
 
-#: View/Estates/view.ctp:14
-#: View/Invoices/view.ctp:9
-#: View/Ivas/view.ctp:9;43
-#: View/Owners/view.ctp:44
-#: View/People/view.ctp:9
-#: View/Renters/view.ctp:44
-msgid "Name"
-msgstr "Nombre"
-
-#: View/Estates/view.ctp:19
-#: View/Invoices/view.ctp:14
-#: View/Ivas/view.ctp:44
-#: View/Owners/view.ctp:45
-#: View/People/view.ctp:14
-#: View/Renters/view.ctp:45
-msgid "Address"
-msgstr "Domicilio"
-
-#: View/Estates/view.ctp:24
-#: View/Invoices/view.ctp:92
-#: View/Items/view.ctp:19
-#: View/Owners/view.ctp:46
-#: View/Renters/view.ctp:46
-msgid "Price"
-msgstr "Precio"
-
-#: View/Estates/view.ctp:29
-#: View/Invoices/view.ctp:39
-#: View/Owners/view.ctp:47
-#: View/Renters/view.ctp:47
-msgid "Contract Start"
-msgstr "Comienzo de Contrato"
-
 #: View/Estates/view.ctp:34
-#: View/Invoices/view.ctp:44
-#: View/Owners/view.ctp:48
-#: View/Renters/view.ctp:48
-msgid "Contract End"
-msgstr "Fin de Contrato"
-
-#: View/Estates/view.ctp:39
-#: View/Invoices/view.ctp:54;93
-#: View/Items/view.ctp:24
-#: View/Ivas/view.ctp:14;52
-#: View/Owners/view.ctp:9;49
-#: View/People/view.ctp:54;90
-#: View/Renters/view.ctp:9;49
-msgid "Created"
-msgstr "Creado"
-
-#: View/Estates/view.ctp:44
-#: View/Invoices/view.ctp:59;94
-#: View/Items/view.ctp:29
-#: View/Ivas/view.ctp:19;53
-#: View/Owners/view.ctp:14;50
-#: View/People/view.ctp:59;91
-#: View/Renters/view.ctp:14;50
-msgid "Modified"
-msgstr "Modificado"
-
-#: View/Estates/view.ctp:49
 #: View/Invoices/view.ctp:19
-#: View/Owners/view.ctp:2
+#: View/Owners/view.ctp:3
+#: View/Renters/view.ctp:43
 msgid "Owner"
 msgstr "Propietario"
 
-#: View/Estates/view.ctp:54
+#: View/Estates/view.ctp:39
+#: View/Owners/view.ctp:43
 #: View/Renters/view.ctp:2
 msgid "Renter"
 msgstr "Inquilino"
 
-#: View/Estates/view.ctp:66
-msgid "Delete Estate"
-msgstr "Eliminar Inmueble"
-
 #: View/Invoices/add.ctp:4
-#: View/Invoices/nueva.ctp:4
+#: View/Invoices/nueva.ctp:18
 msgid "Add Invoice"
 msgstr "Crear Factura"
 
 #: View/Invoices/add.ctp:27
-#: View/Invoices/edit.ctp:29
-#: View/Invoices/nueva.ctp:26
 #: View/Invoices/view.ctp:79
 msgid "New Estates"
 msgstr "Nuevo Inmueble"
 
 #: View/Invoices/add.ctp:28
-#: View/Invoices/edit.ctp:30
-#: View/Invoices/nueva.ctp:27
 #: View/Invoices/view.ctp:80
 #: View/Items/add.ctp:19
 #: View/Items/edit.ctp:21
@@ -486,15 +559,13 @@ msgid "List Items"
 msgstr "Listar Items"
 
 #: View/Invoices/add.ctp:29
-#: View/Invoices/edit.ctp:31
-#: View/Invoices/nueva.ctp:28
 #: View/Invoices/view.ctp:81;119
 #: View/Items/index.ctp:51
 #: View/Items/view.ctp:48
 msgid "New Item"
 msgstr "Nuevo Item"
 
-#: View/Invoices/edit.ctp:4
+#: View/Invoices/edit.ctp:5
 #: View/Invoices/view.ctp:74
 msgid "Edit Invoice"
 msgstr "Editar Factura"
@@ -635,15 +706,10 @@ msgstr "Teléfono"
 msgid "Email"
 msgstr ""
 
-#: View/Ivas/view.ctp:47
-#: View/People/view.ctp:29
-msgid "Cuit"
-msgstr "CUIT"
-
 #: View/Ivas/view.ctp:48
 #: View/People/view.ctp:34
 msgid "Responsableinscripto"
-msgstr ""
+msgstr "Responsable Inscripto"
 
 #: View/Ivas/view.ctp:49
 #: View/People/view.ctp:39
@@ -658,7 +724,7 @@ msgstr ""
 #: View/Ivas/view.ctp:51
 #: View/People/view.ctp:49
 msgid "Consumidorfinal"
-msgstr ""
+msgstr "Consumidor Final"
 
 #: View/Ivas/view.ctp:54
 msgid "Iva Id"
@@ -669,43 +735,12 @@ msgid "Add Owner"
 msgstr "Crear Propietario"
 
 #: View/Owners/edit.ctp:6
-#: View/Owners/view.ctp:29
 msgid "Edit Owner"
 msgstr "Editar Propietario"
 
 #: View/Owners/index.ctp:3
 msgid "Owners"
 msgstr "Propietarios"
-
-#: View/Owners/view.ctp:19
-#: View/People/view.ctp:92
-#: View/Renters/view.ctp:19
-msgid "Person Id"
-msgstr "Persona ID"
-
-#: View/Owners/view.ctp:30
-msgid "Delete Owner"
-msgstr "Eliminar Propietario"
-
-#: View/Owners/view.ctp:38
-#: View/Renters/view.ctp:38
-msgid "Related Estates"
-msgstr "Inmuebles relacionados"
-
-#: View/Owners/view.ctp:43
-#: View/Renters/view.ctp:43
-msgid "Ficha"
-msgstr "Número Ficha"
-
-#: View/Owners/view.ctp:51
-#: View/Renters/view.ctp:51
-msgid "Owner Id"
-msgstr "ID Propietario"
-
-#: View/Owners/view.ctp:52
-#: View/Renters/view.ctp:52
-msgid "Renter Id"
-msgstr "ID Inquilino"
 
 #: View/People/add.ctp:4
 msgid "Add Person"
@@ -732,12 +767,15 @@ msgstr "Eliminar Persona"
 msgid "Related Owners"
 msgstr "Eliminar Propietarios"
 
+#: View/People/view.ctp:92
+msgid "Person Id"
+msgstr "Persona ID"
+
 #: View/Renters/add.ctp:5
 msgid "Add Renter"
 msgstr "Crear Inquilino"
 
 #: View/Renters/edit.ctp:6
-#: View/Renters/view.ctp:29
 msgid "Edit Renter"
 msgstr "Editar Inquilino"
 
@@ -745,15 +783,14 @@ msgstr "Editar Inquilino"
 msgid "Renters"
 msgstr "Inquilinos"
 
-#: View/Renters/view.ctp:30
-msgid "Delete Renter"
-msgstr "Eliminar Inquilino"
+#: View/ViewBlock.php:80
+msgid "A view block with the name '%s' is already/still open."
+msgstr ""
 
-#: Model/Estate.php:validation
-#: for field name;validation address;validation
-#: owner Model/Invoice.php:validation
+#: Model/Company.php:validation
+#: for field name Model/Estate.php:validation
+#: name;validation address;validation owner Model/Invoice.php:validation
 #: Model/Iva.php:validation
-#: name
 #: Model/Person.php:validation
 msgid "notEmpty"
 msgstr "No vacío"
@@ -767,16 +804,30 @@ msgstr "numérico"
 
 #: Model/Estate.php:validation
 #: for field contract_start;validation
-#: contract_end Model/Invoice.php:validation
+#: contract_end
+msgid "Verifique la fecha"
+msgstr ""
+
+#: Model/Invoice.php:validation
+#: for field contract_start;validation
+#: contract_end
 msgid "datetime"
 msgstr ""
 
 #: Model/Invoice.php:validation
-#: for field estate_id
-#: Model/Owner.php:validation
+#: for field estate_id Model/Owner.php:validation
 #: person_id Model/Renter.php:validation
 msgid "uuid"
 msgstr ""
+
+#~ msgid "Delete Estate"
+#~ msgstr "Eliminar Inmueble"
+
+#~ msgid "Delete Owner"
+#~ msgstr "Eliminar Propietario"
+
+#~ msgid "Delete Renter"
+#~ msgstr "Eliminar Inquilino"
 
 #~ msgid "City"
 #~ msgstr "Ciudad"
