@@ -54,6 +54,11 @@ class EstatesController extends AppController {
 				$this->Session->setFlash(__('The estate could not be saved. Please, try again.'));
 			}
 		}
+		$companies = $this->Estate->Company->find('list'
+			, array('fields' => array('Company.id', 'Company.name')
+				, 'recursive' => 1
+			)
+		);
 		$owners = $this->Estate->Owner->find('list'
 			, array('fields' => array('Owner.id', 'Owner.name')
 				, 'recursive' => 1
@@ -64,7 +69,7 @@ class EstatesController extends AppController {
 				, 'recursive' => 1
 			)
 		);
-		$this->set(compact('owners', 'renters'));
+		$this->set(compact('companies', 'owners', 'renters'));
 	}
 
 /**
@@ -89,8 +94,11 @@ class EstatesController extends AppController {
 			$options = array('conditions' => array('Estate.' . $this->Estate->primaryKey => $id));
 			$this->request->data = $this->Estate->find('first', $options);
 		}
-		// $owners = $this->Estate->Owner->find('list');
-		// $renters = $this->Estate->Renter->find('list');
+		$companies = $this->Estate->Company->find('list'
+			, array('fields' => array('Company.id', 'Company.name')
+				, 'recursive' => 1
+			)
+		);
 		$owners = $this->Estate->Owner->find('list'
 			, array('fields' => array('Owner.id', 'Owner.name')
 				, 'recursive' => 1
@@ -101,7 +109,7 @@ class EstatesController extends AppController {
 				, 'recursive' => 1
 			)
 		);
-		$this->set(compact('owners', 'renters'));
+		$this->set(compact('companies', 'owners', 'renters'));
 	}
 
 /**

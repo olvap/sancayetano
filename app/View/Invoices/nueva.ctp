@@ -17,6 +17,17 @@ echo $this->Html->script(array('angular/1.2.16/angular.min'
 			<fieldset>
 				<legend><?php echo __('Add Invoice'); ?></legend>
 				<?php
+					# Empresa
+					echo $this->Form->input('Company.name'
+						, array('class'=>'form-control'
+							, 'disabled'=> true
+							, 'div'=>'form-group'
+							, 'label' => array('class' => 'col-sm-2 control-label', 'text'=>'Empresa')
+							, 'between' => '<div class="col-sm-8">'
+							, 'after' => '</div>'
+						)
+					);
+
 					# Tipo Factura
 					echo $this->Form->input('type'
 						, array('class'=>'form-control'

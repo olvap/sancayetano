@@ -49,6 +49,13 @@ class Estate extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
+		'Company' => array(
+			'className' => 'Company',
+			'foreignKey' => 'company_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
 		'Owner' => array(
 			'className' => 'Owner',
 			'foreignKey' => 'owner_id',

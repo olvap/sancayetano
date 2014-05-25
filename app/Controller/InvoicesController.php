@@ -78,10 +78,15 @@ class InvoicesController extends AppController {
 		if(!$id) {
 			$this->redirect('/');
 		}
+		$this->Invoice->Estate->Behaviors->load('Containable');
 		$this->Invoice->Estate->recursive = -1;
-		$estate = $this->Invoice->Estate->findById($id);
+		$options['conditions'] = array('Estate.id' => $id);
+		$options['contain'] = array('Company' => array('fields' => array('id', 'name')));
+		$estate = $this->Invoice->Estate->find('first', $options);
 		// debug($estate, $showHtml = null, $showFrom = true);
+		
 		$this->request->data['Estate'] = $estate['Estate'];
+		$this->request->data['Company'] = $estate['Company'];
 		$this->request->data['Invoice']['ficha'] = $estate['Estate']['ficha'];
 		$this->request->data['Invoice']['name'] = $estate['Estate']['renter_name'];
 		$this->request->data['Invoice']['address'] = $estate['Estate']['address'];

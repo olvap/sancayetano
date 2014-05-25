@@ -4,6 +4,13 @@
 			<fieldset>
 				<legend><?php echo __('Edit Estate'); ?></legend>
 				<?php
+					echo $this->Form->input('company_id'
+						, array('class'=>'form-control'
+							, 'div'=>'form-group'
+							, 'label' => array('class' => 'col-sm-2 control-label')
+							, 'between' => '<div class="col-sm-8">'
+							, 'after' => '</div>')
+					);
 					echo $this->Form->input('ficha'
 						, array('class'=>'form-control'
 							, 'div'=>'form-group'
