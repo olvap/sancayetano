@@ -38,7 +38,13 @@
             $scope.invoice.total += +$scope.invoice.agua;
           }
           if (+($scope.invoice.stamped != null)) {
-            return $scope.invoice.total += +$scope.invoice.stamped;
+            $scope.invoice.total += +$scope.invoice.stamped;
+          }
+          if (+($scope.invoice.retenciones != null)) {
+            $scope.invoice.total -= +$scope.invoice.retenciones;
+          }
+          if (+($scope.invoice.percepciones != null)) {
+            return $scope.invoice.total -= +$scope.invoice.percepciones;
           }
         }
       };

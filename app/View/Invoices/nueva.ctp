@@ -271,6 +271,28 @@ echo $this->Html->script(array('angular/1.2.16/angular.min'
 						)
 					);
 
+					# Retenciones
+					echo $this->Form->input('retenciones', array('class'=>'form-control'
+							, 'data-ng-change' => 'calcularTotal()'
+							, 'data-ng-model' => 'invoice.retenciones'
+							, 'div'=>'form-group'
+							, 'label' => array('class' => 'col-sm-2 control-label', 'text'=>'Retenciones')
+							, 'between' => '<div class="col-sm-8"><div class="input-group"><span class="input-group-addon">$</span>'
+							, 'after' => '</div></div>'
+						)
+					);
+
+					# Percepciones
+					echo $this->Form->input('percepciones', array('class'=>'form-control'
+							, 'data-ng-change' => 'calcularTotal()'
+							, 'data-ng-model' => 'invoice.percepciones'
+							, 'div'=>'form-group'
+							, 'label' => array('class' => 'col-sm-2 control-label', 'text'=>'Percepciones')
+							, 'between' => '<div class="col-sm-8"><div class="input-group"><span class="input-group-addon">$</span>'
+							, 'after' => '</div></div>'
+						)
+					);
+
 					# Total General
 					echo $this->Form->input('total', array('class'=>'form-control'
 							, 'data-ng-model' => 'invoice.total'

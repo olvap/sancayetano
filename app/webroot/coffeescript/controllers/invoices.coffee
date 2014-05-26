@@ -28,6 +28,8 @@ angular.module('SancayetanoApp').controller 'InvoicesController'
 			if +$scope.invoice.api? then $scope.invoice.total += +$scope.invoice.api
 			if +$scope.invoice.agua? then $scope.invoice.total += +$scope.invoice.agua
 			if +$scope.invoice.stamped? then $scope.invoice.total += +$scope.invoice.stamped
+			if +$scope.invoice.retenciones? then $scope.invoice.total -= +$scope.invoice.retenciones
+			if +$scope.invoice.percepciones? then $scope.invoice.total -= +$scope.invoice.percepciones
 
 
 	$timeout ->
