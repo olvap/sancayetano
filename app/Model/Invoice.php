@@ -131,6 +131,19 @@ App::uses('AppModel', 'Model');
 			'finderQuery' => '',
 			'counterQuery' => ''
 		)
+		, 'Check' => array(
+			'className' => 'Check',
+			'foreignKey' => 'invoice_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		)
 	);
 
 }

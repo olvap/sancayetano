@@ -7,6 +7,22 @@
 (function() {
   angular.module('SancayetanoApp').controller('InvoicesController', [
     '$http', '$location', '$scope', '$timeout', 'Invoice', function($http, $location, $scope, $timeout, Invoice) {
+      $scope.checkAdd = function() {
+        if ($scope.check != null) {
+          if ($scope.invoice.checks == null) {
+            $scope.invoice.checks = [];
+          }
+          $scope.invoice.checks.push($scope.check);
+          $scope.check = null;
+          return $('#checkModal').modal('hide');
+        }
+      };
+      $scope.checkRemove = function(index) {
+        console.log(index);
+        if (index >= 0) {
+          return $scope.invoice.checks.splice(index);
+        }
+      };
       $scope.calcularIVA = function() {
         if (+($scope.invoice.gastos_administrativos != null)) {
           $scope.invoice.iva = (+$scope.invoice.price + +$scope.invoice.gastos_administrativos) * 0.21;

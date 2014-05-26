@@ -9,7 +9,7 @@
 				<th><?php echo $this->Paginator->sort('iva'); ?></th>
 				<th><?php echo $this->Paginator->sort('total'); ?></th>
 				<th><?php echo $this->Paginator->sort('estate_id'); ?></th>
-				<th class="actions"><?php echo __('Actions'); ?></th>
+				<th class="actions text-center"><?php echo __('Actions'); ?></th>
 		</tr>
 		<?php foreach ($invoices as $invoice): ?>
 			<tr>
@@ -38,11 +38,11 @@
 				<td>
 					<?php echo $this->Html->link($invoice['Estate']['name'], array('controller' => 'estates', 'action' => 'view', $invoice['Estate']['id'])); ?>
 				</td>
-				<td class="actions">
+				<td class="actions text-center">
 					<?php //echo $this->Html->link(__('View'), array('action' => 'view', $invoice['Invoice']['id'])); ?>
-					<?php echo $this->Html->link(__('View'), array('action' => 'printPDF', $invoice['Invoice']['id']), array('target'=>'_blank')); ?>
-					<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $invoice['Invoice']['id'])); ?>
-					<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $invoice['Invoice']['id']), null, __('Are you sure you want to delete # %s?', $invoice['Invoice']['id'])); ?>
+					<?php echo $this->Html->link('Imprimir', array('action' => 'printPDF', $invoice['Invoice']['id']), array('target'=>'_blank')); ?>
+					<?php //echo $this->Html->link(__('Edit'), array('action' => 'edit', $invoice['Invoice']['id'])); ?>
+					<?php //echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $invoice['Invoice']['id']), null, __('Are you sure you want to delete # %s?', $invoice['Invoice']['id'])); ?>
 				</td>
 			</tr>
 		<?php endforeach; ?>

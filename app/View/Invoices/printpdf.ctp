@@ -1,4 +1,6 @@
 <?php
+	// debug($invoice);
+
 	App::import('Vendor', 'tcpdf/tcpdf');
 
 	###############################################################
@@ -77,10 +79,10 @@
 	
 	$textfont = 'freesans';
 	$tcpdf -> SetCreator(PDF_CREATOR);
-	$tcpdf -> SetAuthor("ELEFE");
-	$tcpdf -> SetTitle("Lista de Precios");
-	$tcpdf -> SetSubject("Listado de precios de productos");
-	$tcpdf -> SetKeywords("Artículos, Precios, Lista, Listado, Artículo, Precio");
+	$tcpdf -> SetAuthor("San Cayetano");
+	$tcpdf -> SetTitle("Factura");
+	$tcpdf -> SetSubject("Factura");
+	$tcpdf -> SetKeywords("Factura");
 	$tcpdf -> SetImageScale(PDF_IMAGE_SCALE_RATIO);
 	$tcpdf -> AliasNbPages();
 	
@@ -120,6 +122,21 @@
 	$tcpdf -> Cell(CELDA_ANCHO_TOTAL, CELDA_ALTO, 'Subtotal: ' . $invoice['Invoice']["subtotal"], array('B' => 1), 1, 'L');
 	$tcpdf -> Cell(CELDA_ANCHO_TOTAL, CELDA_ALTO, 'IVA: ' . $invoice['Invoice']["iva"], array('B' => 1), 1, 'L');
 	$tcpdf -> Cell(CELDA_ANCHO_TOTAL, CELDA_ALTO, 'Total: ' . $invoice['Invoice']["total"], array('B' => 1), 1, 'L');
+
+	if (isset($invoice['Check']) && sizeof($invoice['Check']) > 0) {
+		$tcpdf -> Cell(CELDA_ANCHO_TOTAL, CELDA_ALTO, '', '', 1, 'L');
+		$tcpdf -> Cell(CELDA_ANCHO_TOTAL, CELDA_ALTO, '', '', 1, 'L');
+		$tcpdf -> Cell(CELDA_ANCHO_TOTAL, CELDA_ALTO, 'Cheques', array('B' => 1), 1, 'C');
+		$tcpdf -> Cell(CELDA_ANCHO_TOTAL/3, CELDA_ALTO, 'Número', array('B' => 1), 0, 'C');
+		$tcpdf -> Cell(CELDA_ANCHO_TOTAL/3, CELDA_ALTO, 'Banco', array('B' => 1), 0, 'C');
+		$tcpdf -> Cell(CELDA_ANCHO_TOTAL/3, CELDA_ALTO, 'Monto', array('B' => 1), 1, 'C');
+		
+		foreach ($invoice['Check'] as $check) {
+			$tcpdf -> Cell(CELDA_ANCHO_TOTAL/3, CELDA_ALTO, $check["number"], array('B' => 1), 0, 'C');
+			$tcpdf -> Cell(CELDA_ANCHO_TOTAL/3, CELDA_ALTO, $check["bank"], array('B' => 1), 0, 'C');
+			$tcpdf -> Cell(CELDA_ANCHO_TOTAL/3, CELDA_ALTO, '$ '.$check["amount"], array('B' => 1), 1, 'C');
+		}
+	}
 
 	
 	// ###################################################################################################

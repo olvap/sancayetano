@@ -5,6 +5,17 @@ angular.module('SancayetanoApp').controller 'InvoicesController'
 	, ['$http', '$location', '$scope', '$timeout', 'Invoice'
 		, ($http, $location, $scope, $timeout, Invoice) ->
 
+	$scope.checkAdd = ->
+		if $scope.check?
+			$scope.invoice.checks = [] if not $scope.invoice.checks?
+			$scope.invoice.checks.push $scope.check
+			$scope.check = null
+			$('#checkModal').modal('hide')
+	
+	$scope.checkRemove = (index) ->
+		console.log index
+		if index >= 0
+			$scope.invoice.checks.splice index
 
 	$scope.calcularIVA = ->
 		if +$scope.invoice.gastos_administrativos?
@@ -34,6 +45,7 @@ angular.module('SancayetanoApp').controller 'InvoicesController'
 
 	$timeout ->
 		$scope.calcularTotal()
+		# $scope.invoice.checks = [{number: '550065432124', bank: 'Nuevo Banco Santa Fe', amount: '3000'}]
 	, 50
 
 ]

@@ -67,7 +67,7 @@ class InvoicesController extends AppController {
 	public function nueva($id = null) {
 		if ($this->request->is('post')) {
 			$this->Invoice->create();
-			if ($this->Invoice->save($this->request->data)) {
+			if ($this->Invoice->saveAll($this->request->data)) {
 				// $this->Session->setFlash(__('The invoice has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 				// return $this->redirect(array('action' => 'printPDF', $this->Invoice->id));
