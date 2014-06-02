@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/elaleprieto/sancayetano.png)](https://codeclimate.com/github/elaleprieto/sancayetano)
+
 CakePHP
 =======
 
